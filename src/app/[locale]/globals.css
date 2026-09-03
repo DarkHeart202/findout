@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  /* ألوان الهوية الرئيسية */
+  --color-main-blue: #5096ff;
+  --color-blue-hover: #357abd;
+  --color-main-orange: #f78b16;
+  --color-dark-b: #003f73;
+  --color-dark-o: #d96c0a;
+  --color-light-primary: #bfdbfe;
+  --color-lightest-primary: #f1f5f9;
+  --color-logo-color: #19a9ed;
+
+  /* ألوان النصوص والهيدر */
+  --color-header: #1f2937;
+  --color-light-header: #1e293b;
+  --color-sub-text: #374151;
+  --color-titles-c: #6b7280;
+  --color-subtitle: #cbd4df;
+  --color-lg: #787e89;
+  --color-hard-gray: #444444;
+
+  /* الألوان المحايدة والرماديات */
+  --color-normal-gray: #a9a9a9;
+  --color-text-gray-blue: #9ca3af;
+  --color-lightest: #f3f4f6;
+  --color-white: #ffffff;
+
+  /* الخلفيات والحدود */
+  --color-app-bg: #f9fafb;
+  --color-border: #e5e7eb;
+  --color-border-section: #f5f8fa;
+  --color-search-stroke: #e0e4ea;
+
+  /* ألوان الأيقونات */
+  --color-icon-color: #9ca3af;
+  --color-active-icon: #4b5563;
+
+  --font-cairo: var(--font-cairo);
+  --font-almarai: var(--font-almarai);
+  --font-inter: var(--font-inter);
+  --font-jakarta: var(--font-jakarta);
+
+  --shadow-glass:
+    0 8px 20px 0 rgba(15, 23, 42, 0.15),
+    inset 0 1px 9.7px 0 rgba(15, 23, 42, 0.15);
+}
+
+@layer components {
+  @keyframes bounceHorizontal {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-5px);
+    }
+  }
+
+  .group:hover .animate-arrow {
+    animation: bounceHorizontal 0.8s infinite;
+  }
+
+  .nav-link-active {
+    @apply relative text-main-blue font-bold;
+  }
+  .nav-link-active::after {
+    content: "";
+    @apply absolute bottom-0 left-0 right-0 h-[2px] bg-main-orange rounded-full;
+  }
+}

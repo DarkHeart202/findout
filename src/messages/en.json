@@ -1,0 +1,171 @@
+{
+  "Common": {
+    "siteName": "Find Out",
+    "dir": "ltr"
+  },
+  "Header": {
+    "home": "Home",
+    "explore": "Explore",
+    "events": "Events",
+    "partners": "Partners",
+    "downloadApp": "Download App",
+    "login": "Login",
+    "newAccount": "New Account",
+    "mobile": "Menu"
+  },
+  "Footer": {
+    "newsletter": {
+      "title": "Subscribe to our weekly newsletter!",
+      "description": "Be the first to know about the latest events, exclusive offers, and best tourist spots in the Kingdom.",
+      "placeholder": "Enter your email here...",
+      "button": "Join Us"
+    },
+    "appSection": {
+      "title": "Download the App",
+      "appStore": "Available on the App Store",
+      "googlePlay": "Available on Google Play"
+    },
+    "termsSection": {
+      "title": "Terms & Conditions",
+      "privacyPolicy": "Privacy Policy",
+      "usageAgreement": "Terms of Use",
+      "cancellationTerms": "Cancellation Policy",
+      "visitorRights": "Visitor Rights"
+    },
+    "contactSection": {
+      "title": "Contact Us",
+      "email": "info@findout.sa",
+      "location": "Saudi Arabia",
+      "phone": "+201032187603"
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "aboutUs": "About Us",
+      "contactUs": "Contact Us",
+      "faq": "FAQ",
+      "addEvent": "Add Your Event"
+    },
+    "about": {
+      "description": "Your go-to guide for tourism and entertainment in Saudi Arabia. We help you discover the best events, restaurants, and destinations for great times with family and friends."
+    },
+    "copyright": "© 2026 Aseem. All rights reserved.",
+    "madeWith": "Made with love in Saudi Arabia"
+  },
+  "Hero": {
+    "badge": "Riyadh Season - More than 240 events this month",
+    "title": "Unforgettable Nights in the Heart of Diriyah",
+    "description": "Live shows, heritage tastings, and amazing experiences await you under the magical sky of Diriyah",
+    "search": {
+      "queryLabel": "Search for",
+      "queryPlaceholder": "Events, restaurants, hotels...",
+      "cityLabel": "City",
+      "cityPlaceholder": "Diriyah, Riyadh",
+      "button": "Search"
+    }
+  },
+  "Home": {
+    "categories": {
+      "title": "Explore by Category",
+      "description": "Four main categories covering everything you need in the city",
+      "events": {
+        "title": "Events",
+        "count": "320 places"
+      },
+      "hotels": {
+        "title": "Hotels",
+        "count": "320 places"
+      },
+      "restaurants": {
+        "title": "Restaurants & Cafes",
+        "count": "220 places"
+      },
+      "entertainment": {
+        "title": "Entertainment",
+        "count": "320 places"
+      }
+    },
+    "featuredPlaces": {
+      "eyebrow": "Places Worth Visiting",
+      "title": "Featured Places in Riyadh",
+      "resultsCount": "results shown - sorted by highest rating",
+      "viewAll": "View All",
+      "viewAllPlaces": "View All Places (884)"
+    },
+    "badges": {
+      "openNow": "Open Now",
+      "mostVisited": "Most Visited",
+      "special": "Special Offer"
+    },
+    "places": {
+      "unit": {
+        "km": "km"
+      },
+      "edgeOfTheWorld": {
+        "title": "Edge of the World",
+        "location": "Al-Uyaynah, Riyadh",
+        "entry": "Free Entry"
+      },
+      "kingdomTower": {
+        "title": "Kingdom Tower ",
+        "location": "Al-Olaya, Riyadh",
+        "entry": "Paid Tickets"
+      },
+      "alBujairiHeritage": {
+        "title": "Al-Bujairi Terrace",
+        "location": "Diriyah, Riyadh",
+        "entry": "Paid Tickets"
+      },
+      "royalGolfClub": {
+        "title": "Royal Greens ",
+        "location": "Jubail Road, Riyadh",
+        "entry": "Advance Booking"
+      },
+      "wadiHanifa": {
+        "title": "Wadi Hanifa Park",
+        "location": "Nature, Wadi Hanifa",
+        "entry": "Free Entry"
+      },
+      "boulevard": {
+        "title": "Boulevard World",
+        "location": "Events, Diriyah",
+        "entry": "Free Entry"
+      },
+      "diriyahNights": {
+        "title": "Diriyah Nights",
+        "location": "Events, Diriyah",
+        "entry": "Free Entry"
+      },
+      "silkRoad": {
+        "title": "Silk Road Museum",
+        "location": "Exhibitions, Al Dirah District",
+        "entry": "Free Entry"
+      }
+    },
+    "upcomingEvents": {
+      "eyebrow": "This Week",
+      "title": "Upcoming Events",
+      "resultsCount": "{count} results shown - sorted by highest rating",
+      "viewAll": "All Events",
+      "viewAllEvents": "View All Events"
+    },
+    "featuredOffers": {
+      "eyebrow": "Save More",
+      "title": "Featured Offers",
+      "subtitle": "Handpicked discounts and experiences from Findout partners",
+      "viewAll": "All Offers",
+      "exploreOffer": "Explore Offer"
+    },
+    "partners": {
+      "eyebrow": "Trusted Destinations",
+      "title": "Our Partners",
+      "subtitle": "Brands and destinations sharing their best experiences with Find Out visitors",
+      "allPartners": "All Partners",
+      "showAllPlaces": "Show All Places ({count})",
+      "viewDetails": "View Details"
+    }
+  },
+  "Metadata": {
+    "defaultTitle": "Welcome | Find Out",
+    "description": "Find Out platform to explore and book the best local events and activities near you."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "icon": true,
+  "typescript": false,
+  "replaceAttrValues": {
+    "#000": "currentColor",
+    "#787E89": "currentColor",
+    "#FF383C": "currentColor",
+    "#5096FF": "currentColor",
+    "#F78B16": "currentColor"
+  },
+  "svgProps": {
+    "width": "100%",
+    "height": "100%",
+    "className": "{props.className}"
+  }
+}

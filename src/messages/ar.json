@@ -1,0 +1,172 @@
+{
+  "Common": {
+    "siteName": "فايند أوت",
+    "dir": "rtl"
+  },
+  "Header": {
+    "home": "الرئيسية",
+    "explore": "استكشف",
+    "events": "فعاليات",
+    "partners": "الشركاء",
+    "downloadApp": "حمل التطبيق",
+    "login": "تسجيل الدخول",
+    "newAccount": "حساب جديد",
+    "mobile": "القائمة"
+  },
+  "Footer": {
+    "newsletter": {
+      "title": "اشترك في نشرتنا الأسبوعية!",
+      "description": "كن أول من يعلم بأحدث الفعاليات، العروض الحصرية، وأجمل الأماكن السياحية في المملكة.",
+      "placeholder": "أدخل بريدك الإلكتروني هنا...",
+      "button": "انضم إلينا"
+    },
+    "appSection": {
+      "title": "حمّل التطبيق",
+      "appStore": "متوفر على App Store",
+      "googlePlay": "متوفر على Google Play"
+    },
+    "termsSection": {
+      "title": "شروط وأحكام",
+      "privacyPolicy": "سياسة الخصوصية",
+      "usageAgreement": "اتفاقية الاستخدام",
+      "cancellationTerms": "شروط الإلغاء",
+      "visitorRights": "حقوق الزائر"
+    },
+    "contactSection": {
+      "title": "تواصل معنا",
+      "email": "info@findout.sa",
+      "location": "المملكة العربية السعودية",
+      "phone": "201032187603+"
+    },
+    "quickLinks": {
+      "title": "روابط سريعة",
+      "aboutUs": "من نحن",
+      "contactUs": "تواصل معنا",
+      "faq": "الأسئلة الشائعة",
+      "addEvent": "أضف فعاليتك"
+    },
+    "about": {
+      "description": "دليلك السياحي والترفيهي الأول في المملكة العربية السعودية، نساعدك على استكشاف أجمل الفعاليات والمطاعم والوجهات لقضاء أسعد الأوقات مع عائلتك وأصدقائك."
+    },
+    "copyright": "© ٢٠٢٦ محمود أسيم، جميع الحقوق محفوظة.",
+    "madeWith": "صنع بكل حب في المملكة العربية السعودية"
+  },
+
+  "Hero": {
+    "badge": "موسم الرياض - أكثر من 240 فعالية هذا الشهر",
+    "title": "ليالٍ لا تُنسى في قلب الدرعية",
+    "description": "عروض حية، تذوق تراثي، وتجارب مذهلة بانتظارك تحت سماء الدرعية الساحرة",
+    "search": {
+      "queryLabel": "ابحث عن",
+      "queryPlaceholder": "فعاليات، مطاعم، فنادق...",
+      "cityLabel": "المدينة",
+      "cityPlaceholder": "الدرعية، الرياض",
+      "button": "بحث"
+    }
+  },
+  "Home": {
+    "categories": {
+      "title": "استكشف حسب الفئة",
+      "description": "أربع فئات رئيسية تغطي كل ما تحتاجه في المدينة",
+      "events": {
+        "title": "الفعاليات",
+        "count": "320 مكان"
+      },
+      "hotels": {
+        "title": "الفنادق",
+        "count": "320 مكان"
+      },
+      "restaurants": {
+        "title": "المطاعم والمقاهي",
+        "count": "220 مكان"
+      },
+      "entertainment": {
+        "title": "الترفيه",
+        "count": "320 مكان"
+      }
+    },
+    "featuredPlaces": {
+      "eyebrow": "أماكن تستحق الزيارة",
+      "title": "أماكن مختارة فالرياض",
+      "resultsCount": "نتائج معروضة - مرتبة حسب الأعلى تقييماً",
+      "viewAll": "عرض الكل",
+      "viewAllPlaces": "عرض كل الأماكن (884)"
+    },
+    "badges": {
+      "openNow": "مفتوح الآن",
+      "mostVisited": "الأكثر زيارة",
+      "special": "عرض خاص"
+    },
+    "places": {
+      "unit": {
+        "km": "كم"
+      },
+      "edgeOfTheWorld": {
+        "title": "حافة العالم",
+        "location": "العيينة، الرياض",
+        "entry": "دخول مجاني"
+      },
+      "kingdomTower": {
+        "title": "برج المملكة الحضاري",
+        "location": "العليا، الرياض",
+        "entry": "تذاكر مدفوعة"
+      },
+      "alBujairiHeritage": {
+        "title": "مطل البجيري التاريخي",
+        "location": "الدرعية، الرياض",
+        "entry": "تذاكر مدفوعة"
+      },
+      "royalGolfClub": {
+        "title": "نادي الجولف الملكي",
+        "location": "طريق الجبيل، الرياض",
+        "entry": "حجز مسبق"
+      },
+      "wadiHanifa": {
+        "title": "منتزه وادي حنيفة",
+        "location": "طبيعة، وادي حنيفة",
+        "entry": "دخول مجاني"
+      },
+      "boulevard": {
+        "title": "بوليفارد وورلد",
+        "location": "فعاليات، الدرعية",
+        "entry": "دخول مجاني"
+      },
+      "diriyahNights": {
+        "title": "ليالي الدرعة",
+        "location": "فعاليات، الدرعية",
+        "entry": "دخول مجاني"
+      },
+      "silkRoad": {
+        "title": "متحف طريق الحرير",
+        "location": "معارض، حي الدرة",
+        "entry": "دخول مجاني"
+      }
+    },
+    "upcomingEvents": {
+      "eyebrow": "هذا الأسبوع",
+      "title": "فعاليات قادمة",
+      "resultsCount": "{count} نتائج معروضة - مرتبة حسب الأعلى تقييماً",
+      "viewAll": "كل الفعاليات",
+      "viewAllEvents": "عرض كل الفعاليات"
+    },
+    "featuredOffers": {
+      "eyebrow": "وفر أكثر",
+      "title": "عروض مميزة",
+      "subtitle": "خصومات وتجارب مختارة لشركاء Findout",
+      "viewAll": "كل العروض",
+      "c": "اكتشف العرض"
+    },
+    "partners": {
+      "eyebrow": "وجهات موثوقة",
+      "title": "شركاؤنا",
+      "subtitle": "علامات ووجهات تشارك أفضل تجاربها مع زوار فايند أوت",
+      "allPartners": "كل الشركاء",
+      "showAllPlaces": "عرض كل الأماكن ({count})",
+      "viewDetails": "عرض التفاصيل"
+    }
+  },
+  "Metadata": {
+    "defaultTitle": "مرحباً بك | فايند أوت",
+    "description": "منصة فايند أوت لاكتشاف وحجز أفضل الفعاليات والأنشطة المحلية بالقرب منك."
+  }
+}
