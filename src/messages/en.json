@@ -334,6 +334,21 @@
       }
     }
   },
+  "Error": {
+    "title": "Something went wrong!",
+    "description": "Sorry, an unexpected error occurred. Please try again.",
+    "errorDetails": "Error Details",
+    "tryAgain": "Try Again",
+    "goBack": "Go Back",
+    "goHome": "Go to Homepage"
+  },
+  "NotFound": {
+    "title": "Page Not Found",
+    "description": "Sorry, the page you're looking for doesn't exist or has been moved.",
+    "goHome": "Go to Homepage",
+    "explorePlaces": "Explore Places",
+    "browseEvents": "Browse Events"
+  },
   "Metadata": {
     "defaultTitle": "Welcome | Find Out",
     "description": "Find Out platform to explore and book the best local events and activities near you."
