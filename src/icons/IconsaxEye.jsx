@@ -1,38 +1,28 @@
 import * as React from "react";
-const SvgIconsaxEye = (props) => (
+
+const SvgEye = ({ className = "w-4 h-4", strokeWidth = 1.5, ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="100%"
     height="100%"
     fill="none"
     viewBox="0 0 24 24"
-    className={props.className}
+    stroke="currentColor"
+    strokeWidth={strokeWidth}
+    className={className}
     {...props}
   >
-    <g clipPath="url(#iconsax-eye_svg__a)">
-      <mask
-        id="iconsax-eye_svg__b"
-        width={24}
-        height={24}
-        x={0}
-        y={0}
-        maskUnits="userSpaceOnUse"
-        style={{
-          maskType: "luminance",
-        }}
-      >
-        <path fill="#fff" d="M24 0H0v24h24z" />
-      </mask>
-      <g fill="#fff" mask="url(#iconsax-eye_svg__b)">
-        <path d="M12 16.33c-2.39 0-4.33-1.94-4.33-4.33S9.61 7.67 12 7.67s4.33 1.94 4.33 4.33-1.94 4.33-4.33 4.33m0-7.16c-1.56 0-2.83 1.27-2.83 2.83s1.27 2.83 2.83 2.83 2.83-1.27 2.83-2.83S13.56 9.17 12 9.17" />
-        <path d="M12 21.02c-3.76 0-7.31-2.2-9.75-6.02-1.06-1.65-1.06-4.34 0-6 2.45-3.82 6-6.02 9.75-6.02s7.3 2.2 9.74 6.02c1.06 1.65 1.06 4.34 0 6-2.44 3.82-5.99 6.02-9.74 6.02m0-16.54c-3.23 0-6.32 1.94-8.48 5.33-.75 1.17-.75 3.21 0 4.38 2.16 3.39 5.25 5.33 8.48 5.33s6.32-1.94 8.48-5.33c.75-1.17.75-3.21 0-4.38-2.16-3.39-5.25-5.33-8.48-5.33" />
-      </g>
-    </g>
-    <defs>
-      <clipPath id="iconsax-eye_svg__a">
-        <path fill="#fff" d="M0 0h24v24H0z" />
-      </clipPath>
-    </defs>
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.573 16.49 16.638 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"
+    />
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+    />
   </svg>
 );
-export default SvgIconsaxEye;
+
+export default SvgEye;

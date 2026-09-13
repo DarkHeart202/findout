@@ -1,10 +1,17 @@
 import * as React from "react";
-const SvgArrowBtn = ({ className, ...props }) => (
+
+const SvgArrowBtn = ({
+  color = "text-[#4A90E2]", // اللون الافتراضي
+  className = "",
+  ...props
+}) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
+    width="100%"
+    height="100%"
     fill="none"
     viewBox="0 0 20 14"
-    className={className}
+    className={`${color} ${className}`}
     {...props}
   >
     <path
@@ -13,4 +20,5 @@ const SvgArrowBtn = ({ className, ...props }) => (
     />
   </svg>
 );
+
 export default SvgArrowBtn;

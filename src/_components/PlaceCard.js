@@ -68,7 +68,10 @@ export default function PlaceCard({ place }) {
             {active ? (
               <HeartFilled className="w-4.5 h-4.5 text-red-500 transition-colors duration-200" />
             ) : (
-              <Heart className="w-4.5 h-4.5 text-[#c9cbd0] hover:text-red-500 transition-colors duration-200" />
+              <Heart
+                strokeWidth={1.5}
+                className="w-4.5 h-4.5 text-[#c9cbd0] hover:text-red-500 transition-colors duration-200"
+              />
             )}
           </button>
         </div>
@@ -96,7 +99,7 @@ export default function PlaceCard({ place }) {
             <div className="w-[1.45px] rounded-full h-2.5 bg-icon-color" />
             <div className="flex items-center gap-1">
               <IconsaxEye
-                strokeWidth={0.5}
+                strokeWidth={2.3}
                 className="w-4 h-4 text-main-blue"
               />
               <span className="font-normal text-[#4B5563]">{place.views}</span>

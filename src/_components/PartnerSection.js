@@ -77,7 +77,7 @@ export const dummyPartners = [
     },
     title: {
       ar: "هيئة تطوير الدرعية",
-      en: "Diriyah Gate Development Authority",
+      en: "Diriyah Gate Development",
     },
     subtitle: {
       ar: "وجهة ثقافية عالمية للفعاليات والتراث والتجارب المسائية",

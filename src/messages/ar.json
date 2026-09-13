@@ -163,6 +163,173 @@
       "allPartners": "كل الشركاء",
       "showAllPlaces": "عرض كل الأماكن ({count})",
       "viewDetails": "عرض التفاصيل"
+    },
+    "partnerBanner": {
+      "badge": "لأصحاب المنشآت",
+      "title": "خلّ مكانك وجهة لا تُنسى",
+      "description": "انضم إلى شركاء Findout، وعرّف آلاف الزوار بتجربتك، عروضك ومواعيدك بسهولة.",
+      "ctaPrimary": "سجّل منشأتك مجاناً",
+      "ctaSecondary": "تعرّف على الميزات",
+      "stats": {
+        "countValue": "+٢,٤٠٠",
+        "countLabel": "منشأة مسجلة في المملكة",
+        "timeValue": "٤ دقائق",
+        "timeLabel": "متوسط وقت التسجيل"
+      }
+    }
+  },
+  "Places": {
+    "PlacesDetails": {
+      "title": "نتائج البحث فالرياض",
+      "resultsCount": "{count} نتائج معروضة",
+      "views": {
+        "grid": "عرض شبكي",
+        "map": "عرض الخريطة"
+      },
+      "categories": {
+        "all": "الكل",
+        "entertainment": "الترفيه",
+        "restaurants": "المطاعم والمقاهي",
+        "hotels": "الفنادق",
+        "events": "الفعاليات"
+      },
+      "sort": {
+        "topRated": "الأعلى تقييماً",
+        "nearest": "الأقرب مسافة"
+      }
+    },
+    "placesHero": {
+      "breadcrumbs": {
+        "home": "الرئيسية",
+        "explorePlaces": "استكشاف الأماكن"
+      },
+      "badge": "دليل للوجهات الاستثنائية",
+      "title": "ليالٍ لا تُنسى في قلب <highlight>المملكة</highlight>",
+      "description": "ابحث عن وجهتك التالية، من التجارب الحية إلى المطاعم والإقامات التي تناسب يومك.",
+      "statsCard": {
+        "badge": "مباشر",
+        "title": "نبض المملكة الآن",
+        "description": "اكتشف وجهات جديدة وتجارب متجددة حولك كل يوم.",
+        "destinationsCount": "2,480+",
+        "destinationsLabel": "وجهة متاحة",
+        "citiesCount": "23+",
+        "citiesLabel": "مدينة للاستكشاف"
+      },
+      "searchBar": {
+        "searchLabel": "ابحث عن",
+        "searchPlaceholder": "فعاليات، مطاعم، فنادق...",
+        "cityLabel": "المدينة",
+        "defaultCity": "الدرعية، الرياض",
+        "categoryLabel": "الفئة",
+        "defaultCategory": "كل الفئات",
+        "searchButton": "استكشف"
+      }
+    }
+  },
+  "Events": {
+    "eventsHero": {
+      "breadcrumb": {
+        "home": "الرئيسية",
+        "events": "فعاليات"
+      },
+      "badge": "هذا الموسم في مدينتك",
+      "title": "<blue>فعاليات</blue> تستاهل تسجّلها",
+      "description": "حفلات، أسواق، ورش، ومواسم — اختر اللي يناسب جدولك",
+      "stats": {
+        "upcomingEvents": "فعالية قادمة",
+        "citiesAndDistricts": "مدينة وأحياء"
+      }
+    },
+    "FeaturedEventSection": {
+      "tag": "هذا الأسبوع",
+      "title": "فعالية مميزة",
+      "featuredBadge": "مميزة",
+      "limitedTickets": "تذاكر محدودة",
+      "detailsBtn": "تفاصيل الفعالية",
+      "featuredEventId": "diriyah-jazz-night"
+    },
+    "AllEventsSection": {
+      "title": "كل الفعاليات",
+      "resultsCount": "10 نتائج معروضة - مرتبة حسب الأعلى تقييماً",
+      "filter": "الفلترة",
+      "categories": {
+        "all": "الكل",
+        "music": "موسيقى",
+        "culture": "ثقافة",
+        "family": "عائلي",
+        "seasons": "مواسم"
+      },
+      "sort": "الترتيب: بالأقرب موعداً",
+      "loadMore": "عرض كل الفعاليات (250)",
+      "daysLeft": "بعد {count} أيام"
+    },
+    "EventLabels": {
+      "location": "الموقع",
+      "priceFrom": "يبدأ من",
+      "date": "التاريخ"
+    },
+    "addEventBanner": {
+      "title": "عندك فعالية أو وجهة تستحق الاكتشاف؟",
+      "description": "انضم كشريك في منصة فايند أوت، وواصل لآلاف الزوار والمهتمين بالفعاليات يومياً، صممنا لك لوحة تحكم ذكية لتسويق حدثك، إدارة التذاكر",
+      "cta": "سجّل كشريك الآن"
+    },
+    "events": {
+      "diriyah-jazz-night": {
+        "id": "diriyah-jazz-night",
+        "title": "ليلة جاز في الدرعية",
+        "description": "أمسية موسيقية حية في أجواء تراثية — فرق محلية وعالمية على مسرح مفتوح في أجواء الدرعية، مع نخبة من فناني الجاز وتجربة ضيافة خاصة تحت النجوم..",
+        "location": "حي الديرة",
+        "city": "الرياض",
+        "price": "150 ريال سعودي",
+        "date": "الثلاثاء 8:00 م",
+        "fullDate": "12 أغسطس 8:00 م",
+        "dayBadge": "15",
+        "monthBadge": "أبريل",
+        "daysLeft": 3,
+        "category": "music"
+      },
+      "heritage-open-market": {
+        "id": "heritage-open-market",
+        "title": "سوق تراثي مفتوح",
+        "description": "تجربة تسوق تراثية فريدة تضم مأكولات شعبية وحرف يدوية عريقة.",
+        "location": "الدرعية، الرياض",
+        "city": "الرياض",
+        "price": "مجاني",
+        "date": "12 أغسطس 8:00 م",
+        "fullDate": "12 أغسطس 8:00 م",
+        "dayBadge": "15",
+        "monthBadge": "أبريل",
+        "daysLeft": 9,
+        "category": "culture"
+      },
+      "boulevard-summer-party": {
+        "id": "boulevard-summer-party",
+        "title": "حفل صيفي بوليفارد",
+        "description": "عروض ضوئية وموسيقية ساحرة في قلب البوليفارد.",
+        "location": "بوليفارد سيتي",
+        "city": "الرياض",
+        "price": "200 ريال سعودي",
+        "date": "12 أغسطس 8:00 م",
+        "fullDate": "12 أغسطس 8:00 م",
+        "dayBadge": "16",
+        "monthBadge": "مايو",
+        "daysLeft": 12,
+        "category": "seasons"
+      },
+      "night-photography-workshop": {
+        "id": "night-photography-workshop",
+        "title": "ورشة تصوير ليلي",
+        "description": "تعلم أساسيات التصوير الفوتوغرافي الليلي واحتراف الضوء والظل.",
+        "location": "وادي حنيفة، حي الدرعية",
+        "city": "الرياض",
+        "price": "100 ريال سعودي",
+        "date": "12 أغسطس 8:00 م",
+        "fullDate": "12 أغسطس 8:00 م",
+        "dayBadge": "15",
+        "monthBadge": "أبريل",
+        "daysLeft": 19,
+        "category": "culture"
+      }
     }
   },
   "Metadata": {

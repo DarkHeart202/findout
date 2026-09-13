@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import hero1 from "@/public/hero/homepage.webp";
 import hero2 from "@/public/hero/homepage2.webp";
-import hero3 from "@/public/hero/Saudi-Event-Show-2023-Exhibition-1.jpg";
+import hero3 from "@/public/hero/eventsHero.jpg";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import Container from "./Container";

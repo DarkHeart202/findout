@@ -162,6 +162,176 @@
       "allPartners": "All Partners",
       "showAllPlaces": "Show All Places ({count})",
       "viewDetails": "View Details"
+    },
+    "partnerBanner": {
+      "badge": "For Business Owners",
+      "title": "Make Your Place an Unforgettable Destination",
+      "description": "Join Findout partners and introduce thousands of visitors to your experience, offers, and schedules with ease.",
+      "ctaPrimary": "Register Your Business Free",
+      "ctaSecondary": "Explore Features",
+      "stats": {
+        "countValue": "+2,400",
+        "countLabel": "Registered businesses in KSA",
+        "timeValue": "4 Mins",
+        "timeLabel": "Average registration time"
+      }
+    }
+  },
+
+  "Places": {
+    "PlacesDetails": {
+      "title": "Search Results in Riyadh",
+      "resultsCount": "{count} results shown",
+      "views": {
+        "grid": "Grid View",
+        "map": "Map View"
+      },
+      "categories": {
+        "all": "All",
+        "entertainment": "Entertainment",
+        "restaurants": "Restaurants & Cafes",
+        "hotels": "Hotels",
+        "events": "Events"
+      },
+      "sort": {
+        "topRated": "Top Rated",
+        "nearest": "Nearest Distance"
+      }
+    },
+    "placesHero": {
+      "breadcrumbs": {
+        "home": "Home",
+        "explorePlaces": "Explore Places"
+      },
+      "badge": "Guide to Destinations",
+      "title": "Unforgettable Nights in the Heart of the <highlight>Kingdom</highlight>",
+      "description": "Find your next destination, from live experiences to restaurants and stays that fit your day.",
+      "statsCard": {
+        "badge": "Live",
+        "title": "Pulse of the Kingdom Now",
+        "description": "Discover new destinations and fresh experiences around you every day.",
+        "destinationsCount": "2,480+",
+        "destinationsLabel": "Destinations Available",
+        "citiesCount": "23+",
+        "citiesLabel": "Cities to Explore"
+      },
+      "searchBar": {
+        "searchLabel": "Search for",
+        "searchPlaceholder": "Events, restaurants, hotels...",
+        "cityLabel": "City",
+        "defaultCity": "Diriyah, Riyadh",
+        "categoryLabel": "Category",
+        "defaultCategory": "All Categories",
+        "searchButton": "Explore"
+      }
+    }
+  },
+  "Events": {
+    "eventsHero": {
+      "breadcrumb": {
+        "home": "Home",
+        "events": "Events"
+      },
+      "badge": "This season in your city",
+      "title": "<blue>Events</blue> Worth Registering For",
+      "description": "Concerts, markets, workshops, and seasons — pick what fits your schedule",
+      "stats": {
+        "upcomingEvents": "Upcoming Events",
+        "citiesAndDistricts": "Cities & Neighborhoods"
+      }
+    },
+    "FeaturedEventSection": {
+      "tag": "This Week",
+      "title": "Featured Event",
+      "featuredBadge": "Featured",
+      "limitedTickets": "Limited Tickets",
+      "detailsBtn": "Event Details",
+      "featuredEventId": "diriyah-jazz-night"
+    },
+    "AllEventsSection": {
+      "title": "All Events",
+      "resultsCount": "10 results shown - sorted by top rated",
+      "filter": "Filter",
+      "categories": {
+        "all": "All",
+        "music": "Music",
+        "culture": "Culture",
+        "family": "Family",
+        "seasons": "Seasons"
+      },
+      "sort": "Sort by: Upcoming",
+      "loadMore": "Show All Events (250)",
+      "daysLeft": "In {count} days"
+    },
+    "EventLabels": {
+      "location": "Location",
+      "priceFrom": "Starts from",
+      "date": "Date"
+    },
+
+    "addEventBanner": {
+      "title": "Have an event or place worth discovering?",
+      "description": "Join Find Out as a partner, and reach thousands of visitors interested in events daily. We've built you a smart dashboard to market your event and manage tickets.",
+      "cta": "Register as a Partner"
+    },
+
+    "events": {
+      "diriyah-jazz-night": {
+        "id": "diriyah-jazz-night",
+        "title": "Jazz Night in Diriyah",
+        "description": "A live musical evening in a heritage setting — local and international bands on an open stage in Diriyah.",
+        "location": "Al Deerah",
+        "city": "Riyadh",
+        "price": "150 SAR",
+        "date": "Tuesday 8:00 PM",
+        "fullDate": "12 Aug 8:00 PM",
+        "dayBadge": "15",
+        "monthBadge": "Apr",
+        "daysLeft": 3,
+        "category": "music"
+      },
+      "heritage-open-market": {
+        "id": "heritage-open-market",
+        "title": "Heritage Open Market",
+        "description": "A unique traditional shopping experience featuring traditional food and handicrafts.",
+        "location": "Diriyah, Riyadh",
+        "city": "Riyadh",
+        "price": "Free",
+        "date": "12 Aug 8:00 PM",
+        "fullDate": "12 Aug 8:00 PM",
+        "dayBadge": "15",
+        "monthBadge": "Apr",
+        "daysLeft": 9,
+        "category": "culture"
+      },
+      "boulevard-summer-party": {
+        "id": "boulevard-summer-party",
+        "title": "Boulevard Summer Party",
+        "description": "Magical light and music shows in the heart of the Boulevard.",
+        "location": "Boulevard City",
+        "city": "Riyadh",
+        "price": "200 SAR",
+        "date": "12 Aug 8:00 PM",
+        "fullDate": "12 Aug 8:00 PM",
+        "dayBadge": "16",
+        "monthBadge": "May",
+        "daysLeft": 12,
+        "category": "seasons"
+      },
+      "night-photography-workshop": {
+        "id": "night-photography-workshop",
+        "title": "Night Photography Workshop",
+        "description": "Learn the basics of night photography and mastering light and shadow.",
+        "location": "Wadi Hanifah, Diriyah",
+        "city": "Riyadh",
+        "price": "100 SAR",
+        "date": "12 Aug 8:00 PM",
+        "fullDate": "12 Aug 8:00 PM",
+        "dayBadge": "15",
+        "monthBadge": "Apr",
+        "daysLeft": 19,
+        "category": "culture"
+      }
     }
   },
   "Metadata": {

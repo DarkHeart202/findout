@@ -14,7 +14,7 @@ function Header() {
   const t = useTranslations("Header");
   const navLinks = [
     { href: "/", label: t("home") },
-    { href: "/explore", label: t("explore") },
+    { href: "/places", label: t("explore") },
     { href: "/events", label: t("events") },
     { href: "/partners", label: t("partners") },
     { href: "/download-app", label: t("downloadApp") },

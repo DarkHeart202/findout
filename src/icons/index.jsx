@@ -33,3 +33,5 @@ export { default as Twitter } from "./Twitter";
 export { default as UilChartGrowth } from "./UilChartGrowth";
 export { default as Vector } from "./Vector";
 export { default as فايندأوت } from "./فايندأوت";
+
+export { default as PriceIcon } from "./PriceIcon";

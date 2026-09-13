@@ -248,7 +248,7 @@ function Footer() {
                   rel="noopener noreferrer"
                   className="group relative w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 bg-[#242a38] hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] hover:scale-110 hover:shadow-[0_0_20px_rgba(220,39,67,0.5)]"
                 >
-                  <Instgramsvg className=" text-slate-300 group-hover:text-white transition-colors duration-300" />
+                  <Instgramsvg className=" w-5 h-5  text-slate-300 group-hover:text-white transition-colors duration-300" />
                 </Link>
 
                 {/* Facebook */}
@@ -258,7 +258,7 @@ function Footer() {
                   rel="noopener noreferrer"
                   className="group relative w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 bg-[#242a38] hover:bg-[#1877F2] hover:scale-110 hover:shadow-[0_0_20px_rgba(24,119,242,0.5)]"
                 >
-                  <IconsaxFacebook className=" text-slate-300 group-hover:text-white transition-colors duration-300" />
+                  <IconsaxFacebook className="w-5 h-5 text-slate-300 group-hover:text-white transition-colors duration-300" />
                 </Link>
 
                 {/* Twitter / X */}
