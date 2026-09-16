@@ -18,7 +18,7 @@ function CategorySection() {
   const t = useTranslations("Home.categories");
 
   return (
-    <section className="py-16 bg-white border-1 border-border-section">
+    <section className="py-16 bg-white border-1 app-border-section">
       <Container>
         <h2 className="text-3xl text-header font-bold">{t("title")}</h2>
         <p className="text-icon-color text-base rtl:font-almarai  mt-1">

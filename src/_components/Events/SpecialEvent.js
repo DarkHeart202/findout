@@ -18,7 +18,7 @@ export default function FeaturedEventSection() {
   if (!featuredEvent) return null;
 
   return (
-    <section className="py-16 bg-white border-1 border-border-section">
+    <section className="py-16 bg-white border-1 app-border-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start gap-1 mb-8">
           <div className="flex items-center gap-2">
@@ -32,7 +32,7 @@ export default function FeaturedEventSection() {
           </h2>
         </div>
 
-        <div className="bg-white rounded-3xl border border-border shadow-[0_2px_25px_-3px_rgba(30,41,59,0.08)] overflow-hidden flex flex-col-reverse lg:flex-row items-stretch">
+        <div className="bg-white rounded-3xl border app-border shadow-[0_2px_25px_-3px_rgba(30,41,59,0.08)] overflow-hidden flex flex-col-reverse lg:flex-row items-stretch">
           <div className="flex-1 p-6 lg:p-10 flex flex-col justify-between gap-6">
             <div>
               <h3 className="text-2xl sm:text-3xl font-extrabold text-light-header mb-3 leading-snug">

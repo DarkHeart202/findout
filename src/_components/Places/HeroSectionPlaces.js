@@ -7,6 +7,8 @@ import { useLocale, useTranslations } from "next-intl";
 import { useState, useMemo } from "react";
 import CustomeSelect from "@/_components/Places/CustomeSelect";
 import CompassIcon from "@/icons/Compassicon";
+import { HomeIcon } from "lucide-react";
+import { Link } from "@/i18n/navigation";
 
 export default function HeroSectionPlaces() {
   const locale = useLocale();
@@ -74,7 +76,13 @@ export default function HeroSectionPlaces() {
         <div className="flex flex-col justify-between gap-6 w-full min-h-125 py-8">
           {/* Breadcrumbs */}
           <nav className="pt-5 relative flex gap-1 items-center text-base text-[#64748B] font-medium w-fit">
-            <span className="z-10">{t("placesHero.breadcrumbs.home")}</span>
+            <Link
+              href="/"
+              className="hover:text-main-blue z-10 gap-1 items-center  flex"
+            >
+              <HomeIcon className="h-5 w-5 " />
+              {t("placesHero.breadcrumbs.home")}
+            </Link>
             <ArrowDown
               strokeWidth={1.6}
               className="w-5 h-3 rtl:rotate-90 z-10 ltr:rotate-270"
@@ -109,7 +117,7 @@ export default function HeroSectionPlaces() {
             {/* Stats Card */}
             <div
               dir={isRtl ? "rtl" : "ltr"}
-              className="border border-border min-h-[195px] max-w-[482px] w-full min-w-[320px] p-6 bg-white/80 backdrop-blur-md rounded-2xl shadow-[0_4px_8px_0_rgba(15,23,42,0.05),_0_20px_32px_-8px_rgba(15,23,42,0.08)] flex items-center justify-between gap-4"
+              className="border app-border min-h-[195px] max-w-[482px] w-full min-w-[320px] p-6 bg-white/80 backdrop-blur-md rounded-2xl shadow-[0_4px_8px_0_rgba(15,23,42,0.05),_0_20px_32px_-8px_rgba(15,23,42,0.08)] flex items-center justify-between gap-4"
             >
               <div className="relative flex-shrink-0 w-[102px] h-[102px] flex items-center justify-center">
                 <div className="absolute inset-0 rounded-full border border-light-primary" />

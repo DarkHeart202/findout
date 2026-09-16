@@ -12,7 +12,7 @@ function AddEventBanner() {
   const circleShadow = "shadow-[10px_15px_30px_rgba(0,0,0,0.18)]";
 
   return (
-    <section className="py-16 bg-white border-1 border-border-section">
+    <section className="py-16 bg-white border-1 app-border-section">
       <Container>
         {/* التدرج المائل: يبدأ من أعلى اليمين (to bottom left) */}
 

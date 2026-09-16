@@ -1,6 +1,4 @@
 @import "tailwindcss";
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -30,9 +28,9 @@
   --color-lightest: #f3f4f6;
   --color-white: #ffffff;
 
-  /* الخلفيات والحدود */
+  /* الخلفيات والحدود المخصصة */
   --color-app-bg: #f9fafb;
-  --color-border: #e5e7eb;
+  --color-app-border: #e2e8f0;
   --color-border-section: #f5f8fa;
   --color-search-stroke: #e0e4ea;
 
@@ -48,30 +46,6 @@
   --shadow-glass:
     0 8px 20px 0 rgba(15, 23, 42, 0.15),
     inset 0 1px 9.7px 0 rgba(15, 23, 42, 0.15);
-}
-
-@layer components {
-  @keyframes bounceHorizontal {
-    0%,
-    100% {
-      transform: translateX(0);
-    }
-    50% {
-      transform: translateX(-5px);
-    }
-  }
-
-  .group:hover .animate-arrow {
-    animation: bounceHorizontal 0.8s infinite;
-  }
-
-  .nav-link-active {
-    @apply relative text-main-blue font-bold;
-  }
-  .nav-link-active::after {
-    content: "";
-    @apply absolute bottom-0 left-0 right-0 h-[2px] bg-main-orange rounded-full;
-  }
 }
 
 @theme inline {
@@ -194,6 +168,30 @@
     @apply bg-background text-foreground;
   }
   html {
-    @apply font-sans;
+    @apply font-sans scroll-smooth;
+  }
+}
+
+@layer components {
+  @keyframes bounceHorizontal {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-5px);
+    }
+  }
+
+  .group:hover .animate-arrow {
+    animation: bounceHorizontal 0.8s infinite;
+  }
+
+  .nav-link-active {
+    @apply relative text-main-blue font-bold;
+  }
+  .nav-link-active::after {
+    content: "";
+    @apply absolute bottom-0 left-0 right-0 h-[2px] bg-main-orange rounded-full;
   }
 }

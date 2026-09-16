@@ -49,7 +49,7 @@ export default async function RootLayout({ children, params }) {
     <html
       lang={locale}
       dir={dir}
-      className={`${inter.variable} ${cairo.variable} ${almarai.variable} ${jakarta.variable} h-full antialiased`}
+      className={`scroll-smooth ${inter.variable} ${cairo.variable} ${almarai.variable} ${jakarta.variable} h-full antialiased`}
     >
       <body className={`min-h-full flex flex-col ${defaultFont}`}>
         <NextIntlClientProvider messages={messages}>

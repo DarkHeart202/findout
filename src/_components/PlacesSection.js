@@ -100,7 +100,7 @@ export default async function PlacesList() {
   ];
 
   return (
-    <section className="py-16 bg-app-bg border-1 border-border-section">
+    <section className="py-16 bg-app-bg border-1 app-border-section">
       <Container className="flex flex-col items-center">
         <div className="mb-8 flex justify-between items-center w-full">
           <div className="flex flex-col gap-2 text-base font-bold  ">

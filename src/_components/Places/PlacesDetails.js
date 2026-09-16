@@ -65,7 +65,7 @@ export default function PlacesSearchPage({ initialPlaces = [] }) {
   }, [filteredPlaces, locale]);
 
   return (
-    <section className="py-8 sm:py-16 bg-white border-b border-border-section">
+    <section className="py-8 sm:py-16 bg-white border-b app-border-section">
       <Container>
         {/* Top Header: Responsive Stack on Mobile */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 sm:mb-8">

@@ -7,11 +7,11 @@ import LocationIcon from "@/icons/LocationIcon";
 import TicketIcon from "@/icons/TicketIcon"; // أو أيقونة التذكرة اللي عملناها
 import { useLocale, useTranslations } from "next-intl";
 import SparkleIcon from "@/icons/SparkleIcon";
+import { HomeIcon } from "lucide-react";
+import { Link } from "@/i18n/navigation";
 
 export default function HeroSectionEvents() {
-  const locale = useLocale();
   const t = useTranslations("Events");
-  const isRtl = locale === "ar";
 
   return (
     <section className="relative w-full min-h-140 lg:min-h-160 flex items-center overflow-hidden py-10">
@@ -32,7 +32,6 @@ export default function HeroSectionEvents() {
           alt="Events Hero Background"
           fill
           priority
-          className="object-fit"
         />
       </div>
 
@@ -41,7 +40,13 @@ export default function HeroSectionEvents() {
         <div className="flex flex-col  w-full py-15">
           {/* Breadcrumbs */}
           <nav className="pt-4 relative flex gap-1 items-center text-base text-[#64748B] font-medium w-fit">
-            <span className="z-10">{t("eventsHero.breadcrumb.home")}</span>
+            <Link
+              href="/"
+              className=" z-10 gap-1 items-center hover:text-main-blue flex"
+            >
+              <HomeIcon className="h-5 w-5 " />
+              {t("eventsHero.breadcrumb.home")}
+            </Link>
             <ArrowDown
               strokeWidth={1.6}
               className="w-5 h-3 rtl:rotate-90 ltr:rotate-270 z-10"
@@ -79,6 +84,7 @@ export default function HeroSectionEvents() {
 
             {/* 1. Container الرئيسي يمسك كل العناصر وبدونه overflow-hidden */}
             <div className="px-5 sm:px-0 relative w-full max-w-[458px] aspect-[4/3] lg:aspect-[458/424]">
+              <div className="absolute -inset-[2.5px] bg-white rotate-358 rounded-3xl aspect-[4/3] lg:scale-104 blur-[1.5px] -z-10" />
               {/* 2. حاوية الصورة فقط هي اللي بياخد overflow-hidden والـ Shadow */}
               <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-[0_18.78px_37.57px_-4.7px_rgba(2,132,199,0.1)]">
                 <Image

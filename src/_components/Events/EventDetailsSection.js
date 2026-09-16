@@ -56,7 +56,7 @@ export default function AllEventsSection({ events = dummyEvents }) {
   };
 
   return (
-    <section className="py-16 bg-app-bg border-1 border-border-section">
+    <section className="py-16 bg-app-bg border-1 app-border-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-6 mb-8">
           <div>

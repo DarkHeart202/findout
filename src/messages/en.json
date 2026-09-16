@@ -9,6 +9,7 @@
     "events": "Events",
     "partners": "Partners",
     "downloadApp": "Download App",
+    "aboutUs": "About Us",
     "login": "Login",
     "newAccount": "New Account",
     "mobile": "Menu"
@@ -226,6 +227,105 @@
       }
     }
   },
+  "Partners": {
+    "breadcrumbs": {
+      "home": "Home",
+      "partners": "Partners"
+    },
+    "badge": "Partners in your city",
+    "title": "<highlight>Find</highlight> <orange>Out</orange> Partners Community",
+    "description": "Trusted destinations and brands share their best experiences with platform partners",
+    "joinNow": "Join Now",
+    "stats": {
+      "cities": "Cities with partners",
+      "partners": "Service partners"
+    },
+    "rating": "Rating",
+    "Features": {
+      "badge": "Why Find Out?",
+      "title": "Everything You Need to Be the First Choice",
+      "subtitle": "Creative and innovative solutions to bring your business closer to local reviewers",
+      "partnership": {
+        "title": "Partnership Starts with Ease",
+        "description": "Flexibility that helps you from page preparation to launch, tailored to suit your business goals"
+      },
+      "analytics": {
+        "title": "Measurable Growth",
+        "description": "Track interest and visits and learn about the content that attracts your audience the most"
+      },
+      "visibility": {
+        "title": "Show Up for Searchers",
+        "description": "Put your business where customers are searching for similar experiences and services"
+      }
+    },
+    "Contact": {
+      "badge": "How to start?",
+      "title": "From your business to a preferred destination",
+      "sendRequest": {
+        "title": "Submit your request",
+        "description": "Share your business details and advertising ambitions to start the growth journey together. Our team will carefully study your requirements to define the optimal plan for your business."
+      },
+      "directContact": {
+        "title": "Engage with your customers",
+        "description": "We review your ad content and craft a comprehensive landing page highlighting your brand identity, while enabling direct communication tools to seamlessly reach your target audience."
+      },
+      "dataAnalysis": {
+        "title": "Data that grows your business",
+        "description": "Your ad launches to reach truly interested customers, backed by detailed performance reports and analytics to empower data-driven marketing decisions with clear outcomes."
+      }
+    },
+    "Form": {
+      "Contact": {
+        "badge": "How to start?",
+        "title": "From your business to a preferred destination",
+        "sendRequest": {
+          "title": "Submit your request",
+          "description": "Share your business details and advertising ambitions to start the growth journey together. Our team will carefully study your requirements to define the optimal plan for your business."
+        },
+        "directContact": {
+          "title": "Engage with your customers",
+          "description": "We review your ad content and craft a comprehensive landing page highlighting your brand identity, while enabling direct communication tools to seamlessly reach your target audience."
+        },
+        "dataAnalysis": {
+          "title": "Data that grows your business",
+          "description": "Your ad launches to reach truly interested customers, backed by detailed performance reports and analytics to empower data-driven marketing decisions with clear outcomes."
+        }
+      },
+      "sideCard": {
+        "title": "Add your business to FIND OUT",
+        "subtitle": "Leave your details and our partnerships team will reach out to discuss the best way to feature your business.",
+        "responseTime": "We usually reply within 1 business day",
+        "privacy": "Your data is strictly confidential"
+      },
+      "labels": {
+        "businessName": "Business / Brand Name",
+        "phone": "Contact Number",
+        "category": "Category",
+        "city": "City",
+        "email": "Email Address",
+        "description": "Short Description"
+      },
+      "placeholders": {
+        "businessName": "e.g., Najd Restaurant...",
+        "phone": "050xxxxxx",
+        "selectCategory": "Select Category",
+        "selectCity": "Select City",
+        "email": "Enter your email address...",
+        "description": "Introduce your business to visitors..."
+      },
+      "categories": {
+        "restaurant": "Restaurants & Cafes",
+        "entertainment": "Entertainment",
+        "hotel": "Hotels"
+      },
+      "cities": {
+        "riyadh": "Riyadh",
+        "jeddah": "Jeddah",
+        "dammam": "Dammam"
+      },
+      "submitButton": "Submit Registration Request"
+    }
+  },
   "Events": {
     "eventsHero": {
       "breadcrumb": {
@@ -331,6 +431,60 @@
         "monthBadge": "Apr",
         "daysLeft": 19,
         "category": "culture"
+      }
+    }
+  },
+  "DownloadApp": {
+    "analytics": {
+      "placesAndPartners": "Places & Partners",
+      "trustedReviews": "Trusted Reviews",
+      "placesAndEvents": "Places & Events"
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "downloadApp": "Download App"
+    },
+    "badge": "Available now on iOS & Android",
+    "title": "Download <blue>Find</blue> <orange>Out</orange> <subTitle>and keep the city in your pocket</subTitle>",
+    "description": "Discover restaurants, entertainment, hotels, and events — <subText>save your favorites, track offers, and plan your day with ease.</subText>",
+    "buttons": {
+      "getItOn": "GET IT ON",
+      "downloadOn": "Download on the"
+    },
+    "stats": {
+      "downloadsLabel": "Total Downloads"
+    },
+    "FeaturesSection": {
+      "badge": "All in One Place",
+      "title": "Everything You Need in One App",
+      "subtitle": "The local discovery platform in Saudi Arabia — designed for your whole day",
+      "cards": {
+        "offers": {
+          "title": "Offers & Events",
+          "desc": "Track discounts and events"
+        },
+        "schedule": {
+          "title": "Flexible Schedules",
+          "desc": "Choose the time that suits you"
+        },
+        "discover": {
+          "title": "Discover Around You",
+          "desc": "Restaurants, hotels, and activities"
+        },
+        "map": {
+          "title": "Map & Favorites",
+          "desc": "Explore places on the map"
+        }
+      }
+    },
+    "banner": {
+      "title": "Over 10,000 Users Across the Kingdom & Beyond",
+      "subtitle": "Download the app now and unlock your city guide in seconds.",
+      "downloadVia": "Download via",
+      "stats": {
+        "activeClients": "Active Clients",
+        "searches": "Searches & Stats",
+        "trustedCompanies": "Trusted Companies"
       }
     }
   },

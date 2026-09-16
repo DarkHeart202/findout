@@ -17,13 +17,14 @@ function Header() {
     { href: "/places", label: t("explore") },
     { href: "/events", label: t("events") },
     { href: "/partners", label: t("partners") },
-    { href: "/download-app", label: t("downloadApp") },
+    { href: "/downloadApp", label: t("downloadApp") },
+    { href: "/aboutUs", label: t("aboutUs") },
   ];
 
   return (
     <Container>
       <header className="flex justify-between items-center fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-7xl px-9 py-4 rounded-full bg-white backdrop-blur-[18px] shadow-glass">
-        <ul className="flex items-center justify-between gap-7">
+        <ul className="flex items-center justify-between gap-7 whitespace-nowrap">
           <Link href="/" className="flex items-center gap-2">
             <svg
               className="w-8 h-12"
@@ -93,7 +94,7 @@ function Header() {
             ))}
           </ul>
         </ul>
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-4 lg:gap-2 xl:gap-5 whitespace-nowrap">
           <LanguageSwitcher />
 
           <button onClick={() => setIsMenuOpen((s) => !s)}>
@@ -101,9 +102,12 @@ function Header() {
           </button>
 
           <div className="hidden md:flex w-[2px] h-[40px] rounded-full bg-[#9ca3af]/50" />
-          <span className="hidden md:flex text-sm text-header font-semibold">
+          <Link
+            href="/auth/login"
+            className="hidden md:flex text-sm text-header font-semibold"
+          >
             {t("login")}
-          </span>
+          </Link>
           <Link
             href={"/auth/register"}
             className="hidden md:flex items-center rounded-xl text-white bg-main-blue px-4 font-bold text-sm h-11.5 hover:bg-blue-hover transition-color duration-300"

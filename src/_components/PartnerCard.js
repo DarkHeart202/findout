@@ -11,7 +11,7 @@ function PartnerCard({ partner }) {
   return (
     <Link
       href={`/partners/${partner.id}`}
-      className="relative rounded-2xl overflow-hidden bg-white border border-border-section shadow-sm flex flex-col justify-between h-full transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-xl cursor-pointer"
+      className="relative rounded-2xl overflow-hidden bg-white border app-border-section shadow-sm flex flex-col justify-between h-full transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-xl cursor-pointer"
     >
       {/* الصورة والـ Badge */}
       <div className="relative h-48 w-full">
@@ -56,7 +56,7 @@ function PartnerCard({ partner }) {
         </div>
 
         {/* المكان ورابط التفاصيل */}
-        <div className="pt-3 border-t border-border flex justify-between items-center text-xs">
+        <div className="pt-3 border-t app-border flex justify-between items-center text-xs">
           <p className="text-lg flex items-center gap-1 rtl:font-almarai font-normal">
             <Location className="w-3.5 h-3.5 text-main-orange shrink-0" />
             <span>{partner.location[locale]}</span>

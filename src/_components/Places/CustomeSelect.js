@@ -30,7 +30,7 @@ export default function CustomeSelect({
   return (
     <div
       ref={dropdownRef}
-      className={`relative border border-border w-full lg:w-52 px-4 py-2 bg-slate-50/80 hover:bg-slate-50 rounded-xl transition-colors cursor-pointer select-none ${className}`}
+      className={`relative border app-border w-full lg:w-52 px-4 py-2 bg-slate-50/80 hover:bg-slate-50 rounded-xl transition-colors cursor-pointer select-none ${className}`}
       onClick={() => setIsOpen(!isOpen)}
     >
       {/* Header */}

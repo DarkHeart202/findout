@@ -1,10 +1,10 @@
-import { useTranslations } from 'next-intl';
-import { useRouter } from 'next/navigation';
-import Container from '@/_components/Container';
-import { Link } from '@/i18n/navigation';
+"use client";
+import Container from "@/_components/Container";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 export default function NotFound() {
-  const t = useTranslations('NotFound');
+  const t = useTranslations("NotFound");
 
   return (
     <Container>
@@ -29,11 +29,12 @@ export default function NotFound() {
               </svg>
             </div>
             <h1 className="text-2xl font-bold text-gray-900 mb-2">
-              {t('title', { defaultValue: 'الصفحة غير موجودة' })}
+              {t("title", { defaultValue: "الصفحة غير موجودة" })}
             </h1>
             <p className="text-gray-600 mb-8">
-              {t('description', {
-                defaultValue: 'عذراً، الصفحة التي تبحث عنها غير موجودة أو تم نقلها.'
+              {t("description", {
+                defaultValue:
+                  "عذراً، الصفحة التي تبحث عنها غير موجودة أو تم نقلها.",
               })}
             </p>
           </div>
@@ -44,21 +45,21 @@ export default function NotFound() {
               href="/"
               className="block w-full bg-main-blue hover:bg-blue-hover text-white font-semibold py-3 px-6 rounded-xl transition-colors duration-200"
             >
-              {t('goHome', { defaultValue: 'العودة للرئيسية' })}
+              {t("goHome", { defaultValue: "العودة للرئيسية" })}
             </Link>
 
             <Link
               href="/places"
               className="block w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-3 px-6 rounded-xl transition-colors duration-200"
             >
-              {t('explorePlaces', { defaultValue: 'استكشف الأماكن' })}
+              {t("explorePlaces", { defaultValue: "استكشف الأماكن" })}
             </Link>
 
             <Link
               href="/events"
               className="block w-full border-2 border-main-blue text-main-blue hover:bg-main-blue hover:text-white font-semibold py-3 px-6 rounded-xl transition-colors duration-200"
             >
-              {t('browseEvents', { defaultValue: 'تصفح الفعاليات' })}
+              {t("browseEvents", { defaultValue: "تصفح الفعاليات" })}
             </Link>
           </div>
         </div>

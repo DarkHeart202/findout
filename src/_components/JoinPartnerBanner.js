@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 function JoinPartnerBanner() {
   const t = useTranslations("Home");
   return (
-    <section className="py-16 bg-app-bg border border-border-section">
+    <section className="py-16 bg-app-bg border app-border-section">
       <Container>
         <div className="relative bg-linear-to-l from-[#017BBA] to-[#002D6E] p-6 sm:p-8 lg:p-11.5 overflow-hidden rounded-[30px] flex flex-col lg:flex-row justify-between items-center gap-8">
           {/* الدائرة المائية */}
