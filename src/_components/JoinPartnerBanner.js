@@ -39,13 +39,13 @@ function JoinPartnerBanner() {
                 <Button
                   className="hover:bg-dark-o h-12.5 w-full sm:w-auto"
                   bgColor="bg-main-orange"
-                  href="/join-partner"
+                  href="/auth/register"
                   rounded="rounded-[11px]"
                 >
                   {t("partnerBanner.ctaPrimary")}
                 </Button>
                 <Button
-                  href="/features"
+                  href="/aboutUs"
                   bgColor="bg-white/10"
                   textColor="text-white"
                   rounded="rounded-[11px]"
