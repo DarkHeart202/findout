@@ -21,12 +21,12 @@ export const sectionVariants = {
 
 const categories = [
   { id: "events", image: "/category/1.webp", href: "/events" },
-  { id: "hotels", image: "/category/3.webp", href: "/hotels" },
-  { id: "restaurants", image: "/category/2.webp", href: "/restaurants" },
+  { id: "hotels", image: "/category/3.webp", href: "/places" },
+  { id: "restaurants", image: "/category/2.webp", href: "/places" },
   {
     id: "entertainment",
     image: "/category/4.webp",
-    href: "/entertainment",
+    href: "/events",
   },
 ];
 
