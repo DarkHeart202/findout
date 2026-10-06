@@ -8,7 +8,7 @@ import {
   useMotionValue,
   useTransform,
 } from "framer-motion";
-import { Mail, Lock, Eye, EyeOff, ArrowRight, Check, X } from "lucide-react";
+import { Mail, Lock, Eye, EyeClosed, ArrowRight, Check, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLocale } from "next-intl";
 
@@ -311,7 +311,7 @@ export function RegisterCard() {
                       {showPassword ? (
                         <Eye className="w-4 h-4 text-slate-400 hover:text-slate-600 transition-colors" />
                       ) : (
-                        <EyeOff className="w-4 h-4 text-slate-400 hover:text-slate-600 transition-colors" />
+                        <EyeClosed className="w-4 h-4 text-slate-400 hover:text-slate-600 transition-colors" />
                       )}
                     </div>
                   </div>
@@ -360,7 +360,7 @@ export function RegisterCard() {
                       {showConfirmedPassword ? (
                         <Eye className="w-4 h-4 text-slate-400 hover:text-slate-600 transition-colors" />
                       ) : (
-                        <EyeOff className="w-4 h-4 text-slate-400 hover:text-slate-600 transition-colors" />
+                        <EyeClosed className="w-4 h-4 text-slate-400 hover:text-slate-600 transition-colors" />
                       )}
                     </div>
                   </div>
