@@ -8,7 +8,7 @@ import {
   useMotionValue,
   useTransform,
 } from "framer-motion";
-import { Mail, Lock, Eye, EyeClosed, ArrowRight, Check, X } from "lucide-react";
+import { Mail, Lock, Eye, EyeOff, ArrowRight, Check, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLocale } from "next-intl";
 
@@ -40,7 +40,8 @@ const pathVar = {
       ease: "easeInOut",
     },
   },
-};
+} as const;
+
 export function RegisterCard() {
   const locale = useLocale();
   const isRtl = locale === "ar";
@@ -53,7 +54,6 @@ export function RegisterCard() {
   const [focusedInput, setFocusedInput] = useState<string | null>(null);
   const router = useRouter();
 
-  // 🌟 شروط التحقق من تطابق كلمة المرور 🌟
   const isConfirmNotEmpty = confirmPassword.length > 0;
   const isPasswordMatch = isConfirmNotEmpty && password === confirmPassword;
   const isPasswordMismatch = isConfirmNotEmpty && password !== confirmPassword;
@@ -78,7 +78,6 @@ export function RegisterCard() {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
 
-    // منع الإرسال لو كلمات المرور غير متطابقة
     if (isPasswordMismatch) return;
 
     setIsLoading(true);
@@ -107,7 +106,6 @@ export function RegisterCard() {
         whileHover={{ z: 10 }}
       >
         <div className="relative group">
-          {/* Border Glow */}
           <motion.div
             className="absolute -inset-[2px] rounded-3xl opacity-60 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
             animate={{
@@ -124,7 +122,6 @@ export function RegisterCard() {
             }}
           />
 
-          {/* Light Beams */}
           <div className="absolute -inset-[1px] rounded-3xl overflow-hidden pointer-events-none z-10">
             <motion.div
               className="absolute top-0 left-0 h-[2.5px] w-[60%] bg-gradient-to-r from-transparent via-[#4A90E2] to-transparent shadow-[0_0_12px_#4A90E2]"
@@ -171,7 +168,6 @@ export function RegisterCard() {
             />
           </div>
 
-          {/* كارت الـ Light Mode الرئيسي */}
           <div className="relative bg-sky-50/70 backdrop-blur-xl rounded-3xl p-6 border border-blue-100/80 shadow-[0_20px_50px_rgba(74,144,226,0.08)] overflow-hidden">
             <div
               className="absolute inset-0 opacity-[0.04] pointer-events-none"
@@ -181,7 +177,6 @@ export function RegisterCard() {
               }}
             />
 
-            {/* اللوجو والعنوان */}
             <div className="text-center space-y-1 mb-5">
               <motion.div
                 initial={{ scale: 0.5, opacity: 0 }}
@@ -254,10 +249,8 @@ export function RegisterCard() {
               </motion.p>
             </div>
 
-            {/* النموذج */}
             <form onSubmit={handleSubmit} className="space-y-4">
               <motion.div className="space-y-3">
-                {/* الإيميل */}
                 <motion.div
                   className="relative"
                   whileFocus={{ scale: 1.01 }}
@@ -287,7 +280,6 @@ export function RegisterCard() {
                   </div>
                 </motion.div>
 
-                {/* الباسورد */}
                 <motion.div
                   className="relative"
                   whileFocus={{ scale: 1.01 }}
@@ -319,13 +311,12 @@ export function RegisterCard() {
                       {showPassword ? (
                         <Eye className="w-4 h-4 text-slate-400 hover:text-slate-600 transition-colors" />
                       ) : (
-                        <EyeClosed className="w-4 h-4 text-slate-400 hover:text-slate-600 transition-colors" />
+                        <EyeOff className="w-4 h-4 text-slate-400 hover:text-slate-600 transition-colors" />
                       )}
                     </div>
                   </div>
                 </motion.div>
 
-                {/* تأكيد الباسورد */}
                 <motion.div
                   className="relative"
                   whileFocus={{ scale: 1.01 }}
@@ -369,12 +360,11 @@ export function RegisterCard() {
                       {showConfirmedPassword ? (
                         <Eye className="w-4 h-4 text-slate-400 hover:text-slate-600 transition-colors" />
                       ) : (
-                        <EyeClosed className="w-4 h-4 text-slate-400 hover:text-slate-600 transition-colors" />
+                        <EyeOff className="w-4 h-4 text-slate-400 hover:text-slate-600 transition-colors" />
                       )}
                     </div>
                   </div>
 
-                  {/* 🌟 رسالة وتنبيه الـ Validation لعدم التطابق أو التطابق 🌟 */}
                   <AnimatePresence>
                     {isPasswordMismatch && (
                       <motion.p
@@ -405,7 +395,6 @@ export function RegisterCard() {
                 </motion.div>
               </motion.div>
 
-              {/* زرار Sign Up */}
               <motion.button
                 whileHover={{ scale: isPasswordMismatch ? 1 : 1.01 }}
                 whileTap={{ scale: isPasswordMismatch ? 1 : 0.99 }}
@@ -444,7 +433,6 @@ export function RegisterCard() {
                 </div>
               </motion.button>
 
-              {/* Divider */}
               <div className="relative mt-3 mb-4 flex items-center">
                 <div className="flex-grow border-t border-slate-200"></div>
                 <span className="mx-3 text-xs text-slate-400">
@@ -453,7 +441,6 @@ export function RegisterCard() {
                 <div className="flex-grow border-t border-slate-200"></div>
               </div>
 
-              {/* زرار Google */}
               <motion.button
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.99 }}
@@ -472,7 +459,6 @@ export function RegisterCard() {
                 </div>
               </motion.button>
 
-              {/* رابط Sign in */}
               <p className="text-center text-xs text-slate-500 mt-4">
                 {locale === "ar"
                   ? " لديك حساب بالفعل؟"

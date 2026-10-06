@@ -8,9 +8,10 @@ import {
   useMotionValue,
   useTransform,
 } from "framer-motion";
-import { ArrowRight, Eye, EyeClosed, Lock, Mail } from "lucide-react";
+import { ArrowRight, Eye, EyeOff, Lock, Mail } from "lucide-react";
 import { useLocale } from "next-intl";
 import React, { useState } from "react";
+
 const pathVar = {
   hidden: {
     opacity: 0,
@@ -24,7 +25,7 @@ const pathVar = {
       ease: "easeInOut",
     },
   },
-};
+} as const;
 
 function Input({ className, type, ...props }: React.ComponentProps<"input">) {
   return (
@@ -50,7 +51,7 @@ export function AuthCard() {
   const [isLoading, setIsLoading] = useState(false);
   const [focusedInput, setFocusedInput] = useState<string | null>(null);
   const [rememberMe, setRememberMe] = useState(false);
-  const router = useRouter(); // 2. تفعيل الـ Router
+  const router = useRouter();
 
   // 3D Motion
   const mouseX = useMotionValue(0);
@@ -77,7 +78,7 @@ export function AuthCard() {
         "token=demo_authenticated_user_token; path=/; max-age=86400; SameSite=Lax";
       setIsLoading(false);
       router.push("/");
-      router.refresh(); // يُنفذ بعد مرور الـ 2000ms
+      router.refresh();
     }, 2000);
   };
 
@@ -97,7 +98,6 @@ export function AuthCard() {
         whileHover={{ z: 10 }}
       >
         <div className="relative group">
-          {/* 🌟 1. Border Glow نبض بلون الهوية الأزرق 🌟 */}
           <motion.div
             className="absolute -inset-[2px] rounded-3xl opacity-60 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
             animate={{
@@ -114,7 +114,6 @@ export function AuthCard() {
             }}
           />
 
-          {/* 🌟 2. Light Beams الحركة على الحواف بلون الهوية 🌟 */}
           <div className="absolute -inset-[1px] rounded-3xl overflow-hidden pointer-events-none z-10">
             <motion.div
               className="absolute top-0 left-0 h-[2.5px] w-[60%] bg-gradient-to-r from-transparent via-[#4A90E2] to-transparent shadow-[0_0_12px_#4A90E2]"
@@ -161,9 +160,7 @@ export function AuthCard() {
             />
           </div>
 
-          {/* 🤍 3. كارت الـ Light Mode الرئيسي 🤍 */}
           <div className="relative bg-sky-50/70 backdrop-blur-xl rounded-3xl p-6 border border-blue-100/80 shadow-[0_20px_50px_rgba(74,144,226,0.08)] overflow-hidden">
-            {/* نمط الشبكة الداخلي باللون الداكن الناعم */}
             <div
               className="absolute inset-0 opacity-[0.04] pointer-events-none"
               style={{
@@ -172,7 +169,6 @@ export function AuthCard() {
               }}
             />
 
-            {/* اللوجو والعنوان */}
             <div className="text-center space-y-1 mb-5">
               <motion.div
                 initial={{ scale: 0.5, opacity: 0 }}
@@ -232,10 +228,8 @@ export function AuthCard() {
               </motion.p>
             </div>
 
-            {/* النموذج */}
             <form onSubmit={handleSubmit} className="space-y-4">
               <motion.div className="space-y-3">
-                {/* الإيميل */}
                 <motion.div
                   className="relative"
                   whileFocus={{ scale: 1.01 }}
@@ -265,14 +259,13 @@ export function AuthCard() {
                   </div>
                 </motion.div>
 
-                {/* الباسورد */}
                 <motion.div
                   className="relative"
                   whileFocus={{ scale: 1.01 }}
                   whileHover={{ scale: 1.005 }}
                   transition={{ type: "spring", stiffness: 400, damping: 25 }}
                 >
-                  <div className="relative flex items-center  overflow-hidden rounded-xl">
+                  <div className="relative flex items-center overflow-hidden rounded-xl">
                     <Lock
                       className={`absolute start-3 w-4 h-4 transition-colors z-10 ${
                         focusedInput === "password"
@@ -297,14 +290,13 @@ export function AuthCard() {
                       {showPassword ? (
                         <Eye className="w-4 h-4 text-slate-400 hover:text-slate-600 transition-colors" />
                       ) : (
-                        <EyeClosed className="w-4 h-4 text-slate-400 hover:text-slate-600 transition-colors" />
+                        <EyeOff className="w-4 h-4 text-slate-400 hover:text-slate-600 transition-colors" />
                       )}
                     </div>
                   </div>
                 </motion.div>
               </motion.div>
 
-              {/* Remember me & Forgot password */}
               <div className="flex items-center justify-between pt-1">
                 <div className="text-xs">
                   <Link
@@ -317,7 +309,6 @@ export function AuthCard() {
 
                 <div className="flex items-center space-x-2">
                   <div className="flex items-center gap-2">
-                    {/* حاوية الـ Checkbox والأيقونة فقط */}
                     <div className="relative flex items-center justify-center">
                       <input
                         id="remember-me"
@@ -354,7 +345,6 @@ export function AuthCard() {
                       )}
                     </div>
 
-                    {/* الـ Label منفصل بجانبه */}
                     <label
                       htmlFor="remember-me"
                       className="text-xs text-slate-600 hover:text-slate-800 transition-colors cursor-pointer select-none"
@@ -365,7 +355,6 @@ export function AuthCard() {
                 </div>
               </div>
 
-              {/* زرار Sign In الأساسي بلون هويتك الغامق أو الأسود المودرن */}
               <motion.button
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.99 }}
@@ -401,17 +390,14 @@ export function AuthCard() {
                 </div>
               </motion.button>
 
-              {/* الـ Divider */}
               <div className="relative mt-3 mb-4 flex items-center">
                 <div className="flex-grow border-t border-slate-200"></div>
                 <span className="mx-3 text-xs text-slate-400">
-                  {" "}
                   {locale === "ar" ? "أو" : "or"}
                 </span>
                 <div className="flex-grow border-t border-slate-200"></div>
               </div>
 
-              {/* زرار Google الفاتح */}
               <motion.button
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.99 }}
@@ -430,7 +416,6 @@ export function AuthCard() {
                 </div>
               </motion.button>
 
-              {/* رابط Sign up */}
               <p className="text-center text-xs text-slate-500 mt-4">
                 {locale === "ar" ? "ليس لديك حساب؟" : "Don't have an account? "}
                 <Link
