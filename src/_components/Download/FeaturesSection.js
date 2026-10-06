@@ -2,12 +2,13 @@ import React from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Calendar, Icons, Search } from "@/icons";
+import Reveal from "../Reveal";
 
 export default function FeaturesSection() {
   const t = useTranslations("DownloadApp.FeaturesSection");
 
   return (
-    <section className="relative overflow-hidden bg-white border border-border-section py-16 overflow-hidden bg-[#F4F8FB]">
+    <Reveal className="relative overflow-hidden bg-white border border-app-border-section py-16 overflow-hidden bg-[#F4F8FB]">
       <div className="container mx-auto px-4 max-w-7xl">
         {/* Header - نفس الستايل القياسي مع المتغيرات */}
         <div className="text-center max-w-3xl mx-auto lg:-mb-12">
@@ -114,6 +115,7 @@ export default function FeaturesSection() {
 
           {/* حاوية الموبايل في المنتصف */}
           <div className="relative w-[390px] sm:w-[340px] lg:w-[380px] h-[802px] lg:h-[480px] z-10 mx-auto">
+            <div className="w-[714px] h-[714px] absolute left-1/2 -translate-x-1/2 blur-[1.5px] -bottom-[504px] rounded-full bg-gradient-to-bl from-[#93BEFA] to-[#E0F2FE]" />
             {/* 2. حاوية صورة الموبايل */}
             <div className="relative w-full  h-full rounded-[36px] sm:rounded-[44px] overflow-hidden mt-[25px] lg:mt-[100px] ">
               <Image
@@ -176,6 +178,6 @@ export default function FeaturesSection() {
           </div>
         </div>
       </div>
-    </section>
+    </Reveal>
   );
 }

@@ -4,6 +4,7 @@ import { ArrowBtn } from "@/icons";
 import { useTranslations } from "next-intl";
 import Button from "./Button";
 import OfferCard from "./OfferCard";
+import Reveal from "./Reveal";
 
 export const dummyOffers = [
   {
@@ -59,7 +60,7 @@ export const dummyOffers = [
 function SpecialOffer() {
   const t = useTranslations("Home");
   return (
-    <section className="py-16 bg-app-bg border app-border-section">
+    <Reveal className="py-16 bg-app-bg border border-app-border-section">
       <Container className="flex flex-col items-center">
         <div className="mb-8 flex justify-between items-center w-full">
           <div className="flex flex-col gap-2 text-base font-bold  ">
@@ -102,7 +103,7 @@ function SpecialOffer() {
           {t("featuredOffers.viewAll")}
         </Button>
       </Container>
-    </section>
+    </Reveal>
   );
 }
 

@@ -1,18 +1,18 @@
 "use client";
 
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import Container from "@/_components/Container";
-import { ArrowDown } from "@/icons";
 import { Star, MapPin, HomeIcon } from "lucide-react";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import SparkleIcon from "@/icons/SparkleIcon";
+import { ArrowDown } from "@/icons";
 
 export default function HeroSectionPartners() {
   const t = useTranslations("Partners");
 
   return (
-    <section className="relative bg-app-bg min-h-140 lg:min-h-160 flex items-center overflow-hidden py-10">
+    <section className="relative bg-app-bg border border-app-border-section min-h-140 lg:min-h-160 flex items-center overflow-hidden py-10">
       {/* الـ SVG والدوائر الضوئية في الخلفية */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Image

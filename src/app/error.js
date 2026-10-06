@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
-import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import { useTranslations } from 'next-intl';
-import Container from '@/_components/Container';
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
+import Container from "@/_components/Container";
 
 export default function Error({ error, reset }) {
   const router = useRouter();
-  const t = useTranslations('Error');
+  const t = useTranslations("Error");
 
   useEffect(() => {
     // Log the error to an error reporting service
-    console.error('Application Error:', error);
+    console.error("Application Error:", error);
   }, [error]);
 
   return (
@@ -34,24 +34,26 @@ export default function Error({ error, reset }) {
                   d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 19c-.77.833.192 2.5 1.732 2.5z"
                 />
               </svg>
-              
             </div>
             <h1 className="text-2xl font-bold text-gray-900 mb-2">
-              {t('title', { defaultValue: 'حدث خطأ!' })}
+              {t("title", { defaultValue: "حدث خطأ!" })}
             </h1>
             <p className="text-gray-600 mb-8">
-              {t('description', {
-                defaultValue: 'عذراً، حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى.'
+              {t("description", {
+                defaultValue:
+                  "عذراً، حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى.",
               })}
             </p>
           </div>
 
           {/* Error Details (only in development) */}
-          {process.env.NODE_ENV === 'development' && (
+          {process.env.NODE_ENV === "development" && (
             <div className="mb-8 p-4 bg-gray-100 rounded-lg text-left">
-              <h3 className="font-bold text-sm text-gray-700 mb-2">تفاصيل الخطأ:</h3>
+              <h3 className="font-bold text-sm text-gray-700 mb-2">
+                تفاصيل الخطأ:
+              </h3>
               <p className="text-xs text-gray-600 font-mono break-all">
-                {error?.message || 'Unknown error'}
+                {error?.message || "Unknown error"}
               </p>
             </div>
           )}
@@ -62,21 +64,21 @@ export default function Error({ error, reset }) {
               onClick={reset}
               className="w-full bg-main-blue hover:bg-blue-hover text-white font-semibold py-3 px-6 rounded-xl transition-colors duration-200"
             >
-              {t('tryAgain', { defaultValue: 'حاول مرة أخرى' })}
+              {t("tryAgain", { defaultValue: "حاول مرة أخرى" })}
             </button>
 
             <button
               onClick={() => router.back()}
               className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-3 px-6 rounded-xl transition-colors duration-200"
             >
-              {t('goBack', { defaultValue: 'العودة للخلف' })}
+              {t("goBack", { defaultValue: "العودة للخلف" })}
             </button>
 
             <button
-              onClick={() => router.push('/')}
+              onClick={() => router.push("/")}
               className="w-full border-2 border-main-blue text-main-blue hover:bg-main-blue hover:text-white font-semibold py-3 px-6 rounded-xl transition-colors duration-200"
             >
-              {t('goHome', { defaultValue: 'العودة للرئيسية' })}
+              {t("goHome", { defaultValue: "العودة للرئيسية" })}
             </button>
           </div>
         </div>

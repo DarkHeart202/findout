@@ -14,7 +14,7 @@ const SvgLocation = (props) => (
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeMiterlimit={10}
-      strokeWidth={0.932}
+      strokeWidth={1}
       clipPath="url(#Location_svg__a)"
     >
       <path d="m3.728 8.04 2.799 3.732a1.164 1.164 0 0 0 1.866 0l2.799-3.732a4.662 4.662 0 1 0-7.464 0" />

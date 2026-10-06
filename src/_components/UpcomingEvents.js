@@ -4,7 +4,8 @@ import Container from "./Container";
 import { ArrowBtn } from "@/icons";
 import EventCard from "@/_components/EventCard";
 import { useTranslations, useLocale } from "next-intl";
-import Button from "./Button";
+import Button from "@/_components/Button";
+import Reveal from "./Reveal";
 
 export const dummyEvents = [
   {
@@ -92,7 +93,7 @@ export const dummyEvents = [
 function UpcomingEvents() {
   const t = useTranslations("Home");
   return (
-    <section className="py-16 bg-white border app-border-section">
+    <Reveal className="py-16 bg-white border border-app-border-section">
       <Container className="flex flex-col items-center">
         <div className="mb-8 flex justify-between items-center w-full">
           <div className="flex flex-col gap-2 text-base font-bold  ">
@@ -135,7 +136,7 @@ function UpcomingEvents() {
           {t("upcomingEvents.viewAllEvents")}
         </Button>
       </Container>
-    </section>
+    </Reveal>
   );
 }
 

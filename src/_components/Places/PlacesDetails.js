@@ -2,9 +2,9 @@
 
 import { useState, useMemo } from "react";
 import dynamic from "next/dynamic";
-import PlaceCard from "../PlaceCard";
+import PlaceCard from "./../PlaceCard";
 import { useTranslations, useLocale } from "next-intl";
-import Container from "../Container";
+import Container from "./../Container";
 
 const MapView = dynamic(() => import("../MapView"), {
   ssr: false,
@@ -24,6 +24,7 @@ import {
 } from "@/components/ui/select";
 import { GridIcon } from "@/icons/GridIcon";
 import { MapIcon } from "@/icons/MapIcon";
+import Reveal from "../Reveal";
 
 export default function PlacesSearchPage({ initialPlaces = [] }) {
   const t = useTranslations("Places.PlacesDetails");
@@ -36,49 +37,80 @@ export default function PlacesSearchPage({ initialPlaces = [] }) {
   const CATEGORIES = [
     { id: "all", label: t("categories.all") },
     { id: "entertainment", label: t("categories.entertainment") },
-    { id: "restaurants", label: t("categories.restaurants") },
-    { id: "hotels", label: t("categories.hotels") },
+    { id: "restaurant", label: t("categories.restaurants") },
+    { id: "hotel", label: t("categories.hotels") },
     { id: "events", label: t("categories.events") },
   ];
 
-  // 1. الفلترة أولاً
-  const filteredPlaces = useMemo(() => {
-    if (selectedCategory === "all") return initialPlaces;
-    return initialPlaces.filter((place) => place.category === selectedCategory);
-  }, [selectedCategory, initialPlaces]);
+  // 1. الفلترة والترتيب
+  const filteredAndSortedPlaces = useMemo(() => {
+    let result =
+      selectedCategory === "all"
+        ? initialPlaces
+        : initialPlaces.filter((place) => place.category === selectedCategory);
+
+    result = [...result].sort((a, b) => {
+      if (sortBy === "top_rated") {
+        return (b.rating || 0) - (a.rating || 0);
+      } else if (sortBy === "nearest") {
+        const distA =
+          typeof a.distance === "number"
+            ? a.distance
+            : parseFloat(a.distance || "0") || 0;
+        const distB =
+          typeof b.distance === "number"
+            ? b.distance
+            : parseFloat(b.distance || "0") || 0;
+        return distA - distB;
+      }
+      return 0;
+    });
+
+    return result;
+  }, [selectedCategory, sortBy, initialPlaces]);
 
   // 2. تحويل البيانات المفلترة للغة الحالية للخريطة
   const formattedPlacesForMap = useMemo(() => {
-    return filteredPlaces.map((place) => ({
-      id: place.id,
-      title:
-        typeof place.title === "object"
-          ? place.title[locale] || place.title.ar
-          : place.title,
-      location:
-        typeof place.location === "object"
-          ? place.location[locale] || place.location.ar
-          : place.location,
-      lat: place.lat || 24.7136,
-      lng: place.lng || 46.6753,
-    }));
-  }, [filteredPlaces, locale]);
+    if (!filteredAndSortedPlaces || !Array.isArray(filteredAndSortedPlaces)) {
+      return [];
+    }
+
+    return filteredAndSortedPlaces.map((place) => {
+      const titleObj = place?.title;
+      const titleText =
+        typeof titleObj === "object" && titleObj !== null
+          ? titleObj[locale] || titleObj.ar || titleObj.en
+          : String(titleObj || "");
+
+      const locationObj = place?.location;
+      const locationText =
+        typeof locationObj === "object" && locationObj !== null
+          ? locationObj[locale] || locationObj.ar || locationObj.en
+          : String(locationObj || "");
+
+      return {
+        id: place.id,
+        title: titleText,
+        location: locationText,
+        lat: Number(place.lat) || 24.7136,
+        lng: Number(place.lng) || 46.6753,
+      };
+    });
+  }, [filteredAndSortedPlaces, locale]);
 
   return (
-    <section className="py-8 sm:py-16 bg-white border-b app-border-section">
+    <Reveal className="py-8 sm:py-16 bg-white border border-app-border-section">
       <Container>
-        {/* Top Header: Responsive Stack on Mobile */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 sm:mb-8">
           <div>
             <h2 className="text-2xl sm:text-3xl text-header font-bold">
               {t("title")}
             </h2>
             <p className="text-icon-color text-sm sm:text-base rtl:font-almarai mt-1">
-              {t("resultsCount", { count: filteredPlaces.length })}
+              {t("resultsCount", { count: filteredAndSortedPlaces.length })}
             </p>
           </div>
 
-          {/* View Switcher Toggle: Full width on mobile, Auto on Desktop */}
           <div className="flex items-center gap-1 bg-slate-100 p-1 sm:p-1.5 rounded-xl w-full sm:w-auto">
             <button
               onClick={() => setViewMode("grid")}
@@ -105,9 +137,7 @@ export default function PlacesSearchPage({ initialPlaces = [] }) {
           </div>
         </div>
 
-        {/* Filter Bar */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 border-b border-slate-100 pb-4">
-          {/* Categories Horizontal Scroll */}
           <div className="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0 no-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0">
             {CATEGORIES.map((cat) => {
               const isSelected = selectedCategory === cat.id;
@@ -129,7 +159,6 @@ export default function PlacesSearchPage({ initialPlaces = [] }) {
             })}
           </div>
 
-          {/* Dynamic Localized Select: Full Width on Mobile */}
           <Select value={sortBy} onValueChange={(value) => setSortBy(value)}>
             <SelectTrigger className="w-full sm:w-52 bg-slate-50 border border-slate-200 text-slate-700 rounded-lg text-xs sm:text-sm">
               <SelectValue>
@@ -163,10 +192,9 @@ export default function PlacesSearchPage({ initialPlaces = [] }) {
           </Select>
         </div>
 
-        {/* Content Area */}
         {viewMode === "grid" ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {filteredPlaces.map((place) => (
+            {filteredAndSortedPlaces.map((place) => (
               <PlaceCard key={place.id} place={place} />
             ))}
           </div>
@@ -180,6 +208,6 @@ export default function PlacesSearchPage({ initialPlaces = [] }) {
           </div>
         )}
       </Container>
-    </section>
+    </Reveal>
   );
 }

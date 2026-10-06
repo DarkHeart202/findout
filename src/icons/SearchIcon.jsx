@@ -17,4 +17,3 @@ const SvgSearch = (props) => (
   </svg>
 );
 export default SvgSearch;
-

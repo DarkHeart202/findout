@@ -32,6 +32,8 @@ export { default as StreamlinePlumpCallCenterSupportServiceRemix } from "./Strea
 export { default as Twitter } from "./Twitter";
 export { default as UilChartGrowth } from "./UilChartGrowth";
 export { default as Vector } from "./Vector";
+export { default as FullStar } from "./FullStar";
+export { default as HalfStar } from "./HalfStar";
 export { default as فايندأوت } from "./فايندأوت";
 
 export { default as PriceIcon } from "./PriceIcon";

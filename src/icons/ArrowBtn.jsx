@@ -1,7 +1,9 @@
 import * as React from "react";
 
 const SvgArrowBtn = ({
-  color = "text-[#4A90E2]", // اللون الافتراضي
+  color = "text-[#4A90E2]",
+  strokeWidth = "1", // قيمة افتراضية للستروك
+  strokeColor = "currentColor", // لون الخط الخارجي
   className = "",
   ...props
 }) => (
@@ -16,6 +18,8 @@ const SvgArrowBtn = ({
   >
     <path
       fill="currentColor"
+      stroke={strokeColor}
+      strokeWidth={strokeWidth} // هنا هيستقبل القيمة اللي هتبعتها
       d="M18.9 7.9a.9.9 0 1 0 0-1.8v1.8M.264 6.364a.9.9 0 0 0 0 1.272l5.727 5.728a.9.9 0 0 0 1.273-1.273L2.173 7l5.091-5.091A.9.9 0 1 0 5.991.636zM18.9 7v-.9H.9v1.8h18z"
     />
   </svg>

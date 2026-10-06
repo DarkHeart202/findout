@@ -18,7 +18,6 @@ function useIsClient() {
 
 export default function EventCard({ event }) {
   const locale = useLocale();
-  const t = useTranslations("Home");
   const { isFavorite, toggleFavorite } = useFavorites();
   const isClient = useIsClient();
 

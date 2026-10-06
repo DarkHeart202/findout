@@ -65,6 +65,10 @@
     }
   },
   "Home": {
+    "breadcrumbs": {
+      "home": "Home",
+      "explore": "Explore"
+    },
     "categories": {
       "title": "Explore by Category",
       "description": "Four main categories covering everything you need in the city",
@@ -103,43 +107,51 @@
       },
       "edgeOfTheWorld": {
         "title": "Edge of the World",
-        "location": "Al-Uyaynah, Riyadh",
-        "entry": "Free Entry"
+        "location": "Al Uyaynah, Riyadh",
+        "entry": "Free Entry",
+        "description": "A breathtaking geological cliff overlooking vast plains, favorite destination for hiking and camping enthusiasts."
       },
       "kingdomTower": {
-        "title": "Kingdom Tower ",
-        "location": "Al-Olaya, Riyadh",
-        "entry": "Paid Tickets"
+        "title": "Kingdom Centre Tower",
+        "location": "Al Olaya, Riyadh",
+        "entry": "Paid Tickets",
+        "description": "A five-star luxury hotel located in Riyadh's most famous landmark, offering stunning panoramic views."
       },
       "alBujairiHeritage": {
-        "title": "Al-Bujairi Terrace",
+        "title": "Al Bujairi Heritage Walk",
         "location": "Diriyah, Riyadh",
-        "entry": "Paid Tickets"
+        "entry": "Paid Tickets",
+        "description": "The upscale dining destination in historic Diriyah, featuring world-renowned restaurants with direct views."
       },
       "royalGolfClub": {
-        "title": "Royal Greens ",
-        "location": "Jubail Road, Riyadh",
-        "entry": "Advance Booking"
+        "title": "Royal Greens Golf Club",
+        "location": "Al Jubail Road, Riyadh",
+        "entry": "Prior Booking Required",
+        "description": "A world-class golf course meticulously designed amidst vast green landscapes for sports enthusiasts."
       },
       "wadiHanifa": {
         "title": "Wadi Hanifa Park",
         "location": "Nature, Wadi Hanifa",
-        "entry": "Free Entry"
+        "entry": "Free Entry",
+        "description": "Wadi Hanifa is one of the most stunning natural destinations in Riyadh, featuring walking paths and green spaces."
       },
       "boulevard": {
         "title": "Boulevard World",
         "location": "Events, Diriyah",
-        "entry": "Free Entry"
+        "entry": "Free Entry",
+        "description": "The premier entertainment destination in Riyadh Season, featuring global restaurants and massive gaming zones."
       },
       "diriyahNights": {
         "title": "Diriyah Nights",
         "location": "Events, Diriyah",
-        "entry": "Free Entry"
+        "entry": "Free Entry",
+        "description": "A unique event blending authenticity, history, and traditional Najdi architecture with a magical atmosphere."
       },
       "silkRoad": {
         "title": "Silk Road Museum",
-        "location": "Exhibitions, Al Dirah District",
-        "entry": "Free Entry"
+        "location": "Exhibitions, Al Durrah",
+        "entry": "Free Entry",
+        "description": "A fine dining restaurant offering exquisite Asian and international cuisines with unique culinary experiences."
       }
     },
     "upcomingEvents": {
@@ -487,6 +499,49 @@
         "trustedCompanies": "Trusted Companies"
       }
     }
+  },
+  "About": {
+    "breadcrumbs": {
+      "home": "Home",
+      "about": "About Us"
+    },
+    "values": {
+      "mission": {
+        "title": "Our Mission",
+        "description": "Providing a simple and comprehensive user experience that enables everyone to explore unique places and events, enhancing ease of planning and having a great time."
+      },
+      "vision": {
+        "title": "Our Vision",
+        "description": "To be the primary destination for users to discover activities and places across the Kingdom, focusing on delivering accurate and constantly updated content."
+      },
+      "values": {
+        "title": "Our Values",
+        "description": "Quality: High services meeting user expectations. Credibility: Providing reliable and always updated information. Innovation: Latest technologies for a unique user experience."
+      }
+    },
+    "whyUs": {
+      "badge": "Why Us?",
+      "coverage": {
+        "title": "Wide Coverage",
+        "description": "We cover a comprehensive range of activities and events across all regions of the Kingdom."
+      },
+      "design": {
+        "title": "Simple Design",
+        "description": "A brighter, easier-to-use interface ensuring you reach your goals quickly and smoothly."
+      },
+      "support": {
+        "title": "Support Team",
+        "description": "Available around the clock to assist you and answer all your inquiries."
+      },
+      "content": {
+        "title": "Updated Content",
+        "description": "Continuous and real-time updates for the latest places and events as soon as they launch."
+      }
+    },
+    "badge": "Learn About Us",
+    "title": "Discover <orange>Our Story</orange>, Vision & Core Values",
+    "description": "Get to know our commitment to excellence and innovation, and the principles guiding our daily work.",
+    "cta": "Learn More"
   },
   "Error": {
     "title": "Something went wrong!",

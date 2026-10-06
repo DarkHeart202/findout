@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import Container from "@/_components/Container";
 // استورد الأيقونات الخاصة بك من المجلد المخصص
 import { Search, UilChartGrowth, LucideHandshake } from "@/icons";
+import Reveal from "../Reveal";
 
 export default function FeaturesSection() {
   const t = useTranslations("Partners");
@@ -36,7 +37,7 @@ export default function FeaturesSection() {
   ];
 
   return (
-    <section className="border border-border-section py-16 lg:py-20 bg-gray-50 bg-white">
+    <Reveal className="border border-app-border-section py-16 lg:py-20 bg-gray-50 bg-white">
       <Container>
         {/* Header */}
         <div className="text-center mb-16">
@@ -81,6 +82,6 @@ export default function FeaturesSection() {
           ))}
         </div>
       </Container>
-    </section>
+    </Reveal>
   );
 }

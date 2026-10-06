@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import { useTranslations } from 'next-intl';
-import Container from '@/_components/Container';
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
+import Container from "@/_components/Container";
 
 export default function LocaleError({ error, reset }) {
   const router = useRouter();
-  const t = useTranslations('Error');
+  const t = useTranslations("Error");
 
   useEffect(() => {
-    console.error('Locale Error:', error);
+    console.error("Locale Error:", error);
   }, [error]);
 
   return (
@@ -35,21 +35,19 @@ export default function LocaleError({ error, reset }) {
               </svg>
             </div>
             <h1 className="text-2xl font-bold text-gray-900 mb-2">
-              {t('title')}
+              {t("title")}
             </h1>
-            <p className="text-gray-600 mb-8">
-              {t('description')}
-            </p>
+            <p className="text-gray-600 mb-8">{t("description")}</p>
           </div>
 
           {/* Error Details (development only) */}
-          {process.env.NODE_ENV === 'development' && (
+          {process.env.NODE_ENV === "development" && (
             <div className="mb-8 p-4 bg-gray-100 rounded-lg text-left">
               <h3 className="font-bold text-sm text-gray-700 mb-2">
-                {t('errorDetails')}:
+                {t("errorDetails")}:
               </h3>
               <p className="text-xs text-gray-600 font-mono break-all">
-                {error?.message || 'Unknown error'}
+                {error?.message || "Unknown error"}
               </p>
             </div>
           )}
@@ -60,21 +58,21 @@ export default function LocaleError({ error, reset }) {
               onClick={reset}
               className="w-full bg-main-blue hover:bg-blue-hover text-white font-semibold py-3 px-6 rounded-xl transition-colors duration-200"
             >
-              {t('tryAgain')}
+              {t("tryAgain")}
             </button>
 
             <button
               onClick={() => router.back()}
               className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-3 px-6 rounded-xl transition-colors duration-200"
             >
-              {t('goBack')}
+              {t("goBack")}
             </button>
 
             <button
-              onClick={() => router.push('/')}
+              onClick={() => router.push("/")}
               className="w-full border-2 border-main-blue text-main-blue hover:bg-main-blue hover:text-white font-semibold py-3 px-6 rounded-xl transition-colors duration-200"
             >
-              {t('goHome')}
+              {t("goHome")}
             </button>
           </div>
         </div>

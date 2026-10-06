@@ -56,7 +56,7 @@ export default function HeroSectionPlaces() {
   );
 
   return (
-    <section className="relative w-full min-h-[560px] md:min-h-[700px] flex items-center">
+    <section className="relative w-full min-h-[560px] md:min-h-[700px] flex items-center border border-app-border-section">
       {/* 1. طبقة الخلفية */}
       <div
         className="absolute inset-0 z-0 bg-app-bg"

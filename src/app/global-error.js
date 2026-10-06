@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 export default function GlobalError({ error, reset }) {
   useEffect(() => {
-    console.error('Global Error:', error);
+    console.error("Global Error:", error);
   }, [error]);
 
   return (
@@ -47,7 +47,7 @@ export default function GlobalError({ error, reset }) {
               </button>
 
               <button
-                onClick={() => window.location.href = '/'}
+                onClick={() => (window.location.href = "/")}
                 className="w-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold py-3 px-6 rounded-xl transition-colors duration-200"
               >
                 العودة للرئيسية

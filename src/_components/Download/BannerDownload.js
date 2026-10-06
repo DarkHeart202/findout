@@ -2,12 +2,13 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import Container from "../Container";
 import { Link } from "@/i18n/navigation";
+import Reveal from "../Reveal";
 
 export default function AppBanner() {
   const t = useTranslations("DownloadApp.banner");
 
   return (
-    <section className="border border-border-section py-12 sm:py-16 lg:py-20 bg-gray-50 overflow-hidden">
+    <Reveal className="border border-app-border-section py-12 sm:py-16 lg:py-20 bg-gray-50 overflow-hidden">
       <Container>
         <div
           className="relative w-full rounded-3xl md:rounded-3xl p-6 sm:p-8  overflow-hidden border border-transparent flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12"
@@ -227,6 +228,6 @@ export default function AppBanner() {
           </div>
         </div>
       </Container>
-    </section>
+    </Reveal>
   );
 }

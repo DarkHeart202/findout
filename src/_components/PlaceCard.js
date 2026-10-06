@@ -1,11 +1,10 @@
 "use client";
 
 import Image from "next/image";
-
 import { useFavorites } from "@/context/FavoriteContext";
 import { useSyncExternalStore } from "react";
 import { HeartFilled, IconsaxEye, Star, Heart, Location } from "@/icons";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
 // دالة لمعرفة هل نحن في متصفح العميل أم في السيرفر
@@ -20,8 +19,9 @@ function useIsClient() {
 
 export default function PlaceCard({ place }) {
   const t = useTranslations("Home");
+  const locale = useLocale(); // 👈 جلب اللغـة الحالية ('ar' أو 'en')
   const { isFavorite, toggleFavorite } = useFavorites();
-  const isClient = useIsClient(); // 👈 ترجع true في العميل و false في السيرفر بديل نظيف لـ mounted
+  const isClient = useIsClient();
 
   const active = isClient && isFavorite(place.id);
 
@@ -29,6 +29,22 @@ export default function PlaceCard({ place }) {
     e.preventDefault();
     toggleFavorite(place);
   };
+
+  // 🌟 دالة مساعدة لاستخراج النص حسب اللغة الحالية بآمان 🌟
+  const getLocalizedProp = (prop) => {
+    if (!prop) return "";
+    if (typeof prop === "object") {
+      return prop[locale] || prop["ar"] || prop["en"] || "";
+    }
+    return prop;
+  };
+
+  const titleText = getLocalizedProp(place?.title);
+  const locationText = getLocalizedProp(place?.location);
+  const entryText = getLocalizedProp(place?.entry);
+  const badgeLabelText = place?.badge
+    ? getLocalizedProp(place.badge.label)
+    : "";
 
   return (
     <Link
@@ -38,7 +54,7 @@ export default function PlaceCard({ place }) {
       <div className="relative h-48">
         <Image
           src={place.image}
-          alt={place.title}
+          alt={titleText || "Place image"}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
           className="object-cover"
@@ -53,7 +69,7 @@ export default function PlaceCard({ place }) {
                   : "bg-orange-100 text-orange-700"
               }`}
             >
-              {place.badge.label}
+              {badgeLabelText}
             </span>
           ) : (
             <div />
@@ -81,14 +97,14 @@ export default function PlaceCard({ place }) {
         <div className="flex justify-between items-center pb-4.5 border-b-1 border-b-border">
           <div>
             <h3 className="font-bold mt-1 text-base rtl:font-almarai font-normal">
-              {place.title}
+              {titleText}
             </h3>
-            <p className="text-xs  text-lg flex gap-0.5 mt-1.5 ">
+            <p className="text-xs text-lg flex gap-0.5 mt-1.5 ">
               <Location
                 strokeWidth={1.5}
                 className="w-3.5 h-3.5 text-main-orange"
               />
-              {place.location}
+              {locationText}
             </p>
           </div>
           <div className="flex items-center gap-2 text-sm">
@@ -107,7 +123,7 @@ export default function PlaceCard({ place }) {
           </div>
         </div>
         <div className="flex justify-between items-center text-xs pt-3 text-lg rtl:font-almarai">
-          <span>{place.entry}</span>
+          <span>{entryText}</span>
           <span>
             {place.distance} {t("places.unit.km")}
           </span>

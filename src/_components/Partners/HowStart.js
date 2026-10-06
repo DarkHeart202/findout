@@ -3,12 +3,13 @@
 import { useTranslations } from "next-intl";
 import Container from "@/_components/Container";
 import Image from "next/image";
+import Reveal from "../Reveal";
 
 export default function ContactSection() {
   const t = useTranslations("Partners.Contact");
 
   return (
-    <section className="border border-border-section py-12 sm:py-16 lg:py-20 bg-gray-50 overflow-hidden">
+    <Reveal className="border border-app-border-section py-12 sm:py-16 lg:py-20 bg-gray-50 overflow-hidden">
       <Container>
         {/* Header */}
         <div className="text-center mb-12 lg:mb-16">
@@ -205,6 +206,6 @@ export default function ContactSection() {
           </div>
         </div>
       </Container>
-    </section>
+    </Reveal>
   );
 }

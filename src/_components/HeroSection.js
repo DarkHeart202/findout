@@ -53,7 +53,7 @@ function HeroSection() {
   };
 
   return (
-    <section className="relative h-140 md:h-175 w-full ">
+    <section className="relative border border-app-border-section h-140 md:h-175 w-full ">
       {/* Background Images */}
       {heroImages.map((image, index) => (
         <div

@@ -10,21 +10,21 @@ const SvgIconsaxRefreshCircle = (props) => (
     {...props}
   >
     <path
-      stroke="#fff"
+      stroke="#F58220"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.5}
       d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10"
     />
     <path
-      stroke="#fff"
+      stroke="#F58220"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.5}
       d="M8.01 14.51c.18.3.4.58.65.83a4.73 4.73 0 0 0 6.68 0 4.7 4.7 0 0 0 1.32-2.67M7.34 11.33c.14-.98.57-1.92 1.32-2.67a4.73 4.73 0 0 1 6.68 0c.26.26.47.54.65.83"
     />
     <path
-      stroke="#fff"
+      stroke="#F58220"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.5}

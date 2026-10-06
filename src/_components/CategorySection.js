@@ -1,7 +1,23 @@
-import { useTranslations } from "next-intl";
+"use client";
 import { Link } from "@/i18n/navigation";
+import { motion, useInView } from "framer-motion";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { useRef } from "react";
 import Container from "./Container";
+
+export const sectionVariants = {
+  hidden: { opacity: 0, y: 100 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+      staggerChildren: 0.2, // تتابع ظهور الأبناء
+    },
+  },
+};
 
 const categories = [
   { id: "events", image: "/category/1.webp", href: "/events" },
@@ -17,8 +33,19 @@ const categories = [
 function CategorySection() {
   const t = useTranslations("Home.categories");
 
+  const ref = useRef(null);
+
+  // يتابع هل السكشن ظهر في الشاشة ولا لأ
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   return (
-    <section className="py-16 bg-white border-1 app-border-section">
+    <motion.section
+      ref={ref}
+      variants={sectionVariants}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      className="py-16 bg-white border border border-app-border-section"
+    >
       <Container>
         <h2 className="text-3xl text-header font-bold">{t("title")}</h2>
         <p className="text-icon-color text-base rtl:font-almarai  mt-1">
@@ -55,7 +82,7 @@ function CategorySection() {
           ))}
         </div>
       </Container>
-    </section>
+    </motion.section>
   );
 }
 

@@ -1,12 +1,29 @@
 "use client";
-import { useState } from "react";
-import Container from "./Container";
+import { Link } from "@/i18n/navigation";
 import { Menu, X } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
-import NavLinks from "./NavLinks";
+import { useState } from "react";
+import Container from "./Container";
 import LanguageSwitcher from "./LanguageSwitcher";
-import { Link } from "@/i18n/navigation";
+import NavLinks from "./NavLinks";
+import { motion } from "framer-motion";
 
+const pathVar = {
+  hidden: {
+    pathLength: 0,
+    fillOpacity: 0,
+    strokeOpacity: 1,
+  },
+  visible: {
+    pathLength: 1,
+    fillOpacity: 1,
+    strokeOpacity: 0, // إخفاء الـ stroke بعد اكتمال التعبئة
+    transition: {
+      pathLength: { duration: 1.8, ease: "easeInOut" },
+      fillOpacity: { duration: 0.6, delay: 1.2, ease: "easeOut" },
+    },
+  },
+};
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const locale = useLocale();
@@ -26,17 +43,24 @@ function Header() {
       <header className="flex justify-between items-center fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-7xl px-9 py-4 rounded-full bg-white backdrop-blur-[18px] shadow-glass">
         <ul className="flex items-center justify-between gap-7 whitespace-nowrap">
           <Link href="/" className="flex items-center gap-2">
-            <svg
+            <motion.svg
+              drag
+              dragConstraints={{ left: 100, right: 0, top: 100, bottom: 100 }}
+              dragElastic={0.5}
+              initial="hidden"
+              animate="visible"
               className="w-8 h-12"
               viewBox="0 0 30 46"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
+              <motion.path
+                variants={pathVar}
                 d="M0.0493441 13.9373C-0.824158 21.6242 10.1675 34.0715 11.8068 35.88C11.8817 35.9627 12.0098 35.9014 12.0098 35.7898V29.0523C12.0098 29.0449 12.0091 29.0374 12.0079 29.0301C11.8282 27.9977 12.8278 27.221 13.4132 26.9263C13.4559 26.9048 13.4834 26.8617 13.4834 26.8139V25.0322C13.4834 24.9719 13.4381 24.9203 13.3786 24.9102C7.03604 23.8325 5.23894 17.9459 5.13363 15.113C5.1334 15.1067 5.13369 15.1005 5.13444 15.0943C5.99753 7.85703 11.2745 5.71 14.5886 5.71C22.3247 6.32398 24.4531 12.7298 24.2894 15.3495C23.9263 21.8254 19.0289 24.145 16.7134 24.6019C16.6551 24.6134 16.6147 24.6638 16.6147 24.7232V26.7847C16.6147 26.8463 16.6605 26.8975 16.72 26.9133C17.3993 27.0945 17.9251 28.1105 18.1434 28.7166C18.1476 28.7285 18.1499 28.7406 18.1503 28.7531L18.3848 35.5545C18.3886 35.6646 18.5264 35.7118 18.6003 35.63C27.7665 25.4769 30.3713 17.8202 29.8887 13.6917C28.7835 4.23645 20.7897 -3.74743e-06 15.3867 0C5.1333 0 0.663317 8.53431 0.0493441 13.9373Z"
                 fill="url(#paint0_linear_563_1030)"
               />
-              <path
+              <motion.path
+                variants={pathVar}
                 d="M14.7067 6.44705C19.5894 6.44705 23.5481 10.4052 23.5485 15.2879L23.5367 15.743C23.321 20.002 20.0914 23.4641 15.9381 24.0428L16.0533 27.1697C16.9088 27.5488 17.5158 28.391 17.5465 29.3846L17.9528 42.5799C17.9933 43.8969 17.0511 45.0399 15.7506 45.2517C14.1673 45.5092 12.7248 44.2991 12.7037 42.6951L12.5309 29.4949C12.5174 28.4565 13.1375 27.5588 14.0299 27.1658L13.9713 24.0965C9.43325 23.7219 5.86584 19.9226 5.86584 15.2879C5.86617 10.4057 9.82461 6.44783 14.7067 6.44705ZM14.7067 7.79764C10.5706 7.79841 7.21675 11.1517 7.21643 15.2879C7.21643 19.4243 10.5704 22.7783 14.7067 22.7791C18.8436 22.7791 22.1979 19.4248 22.1979 15.2879C22.1976 11.1512 18.8434 7.79764 14.7067 7.79764ZM13.9869 8.43338C13.8164 8.45441 13.6489 8.49612 13.486 8.54764C12.0507 9.05977 10.7748 9.96924 9.74768 11.0564C9.71153 11.0937 9.67567 11.1314 9.64124 11.1687C8.59853 12.2357 8.1811 13.6921 7.86389 15.1824C7.81357 15.3478 7.75213 15.5173 7.65002 15.656C7.73039 15.5042 7.76666 15.3342 7.79456 15.1668C7.9061 13.6877 8.25816 12.0521 9.37073 10.9187L9.47815 10.8045C10.5583 9.65998 11.9469 8.80994 13.4694 8.47928C13.6406 8.44858 13.8151 8.42965 13.9869 8.43338Z"
                 fill="#FE8B16"
               />
@@ -53,9 +77,11 @@ function Header() {
                   <stop offset="1" stopColor="#0381BE" />
                 </linearGradient>
               </defs>
-            </svg>
+            </motion.svg>
             {locale === "ar" ? (
               <svg
+                initial="hidden"
+                animate="visible"
                 viewBox="0 0 51 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -97,20 +123,85 @@ function Header() {
         <div className="flex items-center gap-4 lg:gap-2 xl:gap-5 whitespace-nowrap">
           <LanguageSwitcher />
 
-          <button onClick={() => setIsMenuOpen((s) => !s)}>
-            <Menu className="md:hidden text-active-icon" />
+          <Link
+            href="/favorites"
+            className="group  active:scale-90 shadow-[0_3px_6px_-1px_rgba(15,23,42,0.15)]  z-20 w-11 h-11 rounded-[12px] bg-white/15 hover:bg-white/25 border border-white/30 backdrop-blur-md flex items-center justify-center text-white transition-all  cursor-pointer"
+          >
+            <svg
+              width="20"
+              height="18"
+              viewBox="0 0 26 23"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g filter="url(#filter0_i_1105_724)">
+                <path
+                  d="M12.7966 22.9743C12.4276 22.9743 12.0705 22.9267 11.7729 22.8196C7.22561 21.2602 0 15.7249 0 7.54702C0 3.38068 3.36878 0 7.5113 0C9.52305 0 11.4039 0.785651 12.7966 2.1903C14.1893 0.785651 16.0701 0 18.0819 0C22.2244 0 25.5932 3.39259 25.5932 7.54702C25.5932 15.7368 18.3676 21.2602 13.8203 22.8196C13.5227 22.9267 13.1656 22.9743 12.7966 22.9743Z"
+                  fill="#F1F5F9"
+                />
+              </g>
+              <defs>
+                <filter
+                  id="filter0_i_1105_724"
+                  x="0"
+                  y="0"
+                  width="25.5931"
+                  height="27.282"
+                  filterUnits="userSpaceOnUse"
+                  colorInterpolationFilters="sRGB"
+                >
+                  <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="BackgroundImageFix"
+                    result="shape"
+                  />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset dy="4.30769" />
+                  <feGaussianBlur stdDeviation="3.23077" />
+                  <feComposite
+                    in2="hardAlpha"
+                    operator="arithmetic"
+                    k2="-1"
+                    k3="1"
+                  />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0.117647 0 0 0 0 0.160784 0 0 0 0 0.231373 0 0 0 0.15 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="shape"
+                    result="effect1_innerShadow_1105_724"
+                  />
+                </filter>
+              </defs>
+            </svg>
+          </Link>
+
+          <button
+            className="md:hidden"
+            onClick={() => setIsMenuOpen((s) => !s)}
+          >
+            <Menu className=" text-active-icon" />
           </button>
 
           <div className="hidden md:flex w-[2px] h-[40px] rounded-full bg-[#9ca3af]/50" />
           <Link
             href="/auth/login"
-            className="hidden md:flex text-sm text-header font-semibold"
+            className="hidden md:flex text-sm text-header active:scale-95 hover:text-main-blue font-semibold"
           >
             {t("login")}
           </Link>
           <Link
             href={"/auth/register"}
-            className="hidden md:flex items-center rounded-xl text-white bg-main-blue px-4 font-bold text-sm h-11.5 hover:bg-blue-hover transition-color duration-300"
+            className="hidden md:flex items-center rounded-xl active:scale-95 text-white bg-main-blue px-4 font-bold text-sm h-11.5 hover:bg-blue-hover transition-color duration-300"
           >
             {t("newAccount")}
           </Link>

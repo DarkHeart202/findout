@@ -14,7 +14,7 @@ export default function HeroSectionEvents() {
   const t = useTranslations("Events");
 
   return (
-    <section className="relative w-full min-h-140 lg:min-h-160 flex items-center overflow-hidden py-10">
+    <section className=" border border-app-border-section relative w-full min-h-140 lg:min-h-160 flex items-center overflow-hidden py-10">
       {/* 1. الباترن في الخلفية ورا خالص */}
       <div
         className="absolute inset-0 z-0 bg-app-bg"

@@ -4,6 +4,7 @@ import Container from "./Container";
 import { ArrowBtn } from "@/icons";
 import { useTranslations } from "next-intl";
 import PartnerCard from "./PartnerCard";
+import Reveal from "./Reveal";
 
 export const dummyPartners = [
   {
@@ -95,7 +96,7 @@ export const dummyPartners = [
 function PartnerSection() {
   const t = useTranslations("Home");
   return (
-    <section className="py-16 bg-white border-1 app-border-section">
+    <Reveal className="py-16 bg-white border border-app-border-section">
       <Container className="flex flex-col items-center">
         <div className="mb-8 flex justify-between items-center w-full">
           <div className="flex flex-col gap-2 text-base font-bold  ">
@@ -136,7 +137,7 @@ function PartnerSection() {
           {t("partners.showAllPlaces", { count: 9 })}
         </Button>
       </Container>
-    </section>
+    </Reveal>
   );
 }
 

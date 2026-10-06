@@ -19,4 +19,5 @@ export default function GlobalLoading() {
       </div>
     </div>
   );
+  D;
 }

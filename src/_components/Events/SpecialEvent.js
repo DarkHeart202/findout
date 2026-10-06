@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { Calendar, Location, PriceIcon, ArrowBtn } from "@/icons";
 import { dummyEvents } from "@/data/event"; // جلب الـ Array
+import Reveal from "../Reveal";
 
 export default function FeaturedEventSection() {
   const locale = useLocale();
@@ -18,7 +19,7 @@ export default function FeaturedEventSection() {
   if (!featuredEvent) return null;
 
   return (
-    <section className="py-16 bg-white border-1 app-border-section">
+    <Reveal className="py-16 bg-white border border-app-border-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start gap-1 mb-8">
           <div className="flex items-center gap-2">
@@ -38,7 +39,7 @@ export default function FeaturedEventSection() {
               <h3 className="text-2xl sm:text-3xl font-extrabold text-light-header mb-3 leading-snug">
                 {featuredEvent.title[locale]}
               </h3>
-              <p className="text-sm sm:text-base text-icon-c leading-relaxed max-w-xl">
+              <p className="text-sm sm:text-base text-icon-color leading-relaxed max-w-xl">
                 {featuredEvent.description[locale]}
               </p>
             </div>
@@ -118,6 +119,6 @@ export default function FeaturedEventSection() {
           </div>
         </div>
       </div>
-    </section>
+    </Reveal>
   );
 }

@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
 import Container from "../Container";
+import Reveal from "../Reveal";
 
 function AddEventBanner() {
   const t = useTranslations("Events.addEventBanner");
@@ -12,7 +13,7 @@ function AddEventBanner() {
   const circleShadow = "shadow-[10px_15px_30px_rgba(0,0,0,0.18)]";
 
   return (
-    <section className="py-16 bg-white border-1 app-border-section">
+    <Reveal className="py-16 bg-white border border-app-border-section">
       <Container>
         {/* التدرج المائل: يبدأ من أعلى اليمين (to bottom left) */}
 
@@ -68,7 +69,7 @@ function AddEventBanner() {
           </div>
         </div>
       </Container>
-    </section>
+    </Reveal>
   );
 }
 

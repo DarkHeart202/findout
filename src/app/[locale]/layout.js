@@ -7,12 +7,14 @@ import { FavoriteProvider } from "@/context/FavoriteContext";
 export async function generateMetadata({ params }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Metadata" });
+  const isRtl = locale === "ar";
+  const brandName = isRtl ? "فايند أوت" : "Find Out";
+
   return {
     title: {
-      template: "%s | Find Out",
-      default: t("defaultTitle"),
+      template: `%s | ${brandName}`,
+      default: isRtl ? "فايند أوت | مرحبا" : "Find Out | Welcome",
     },
-    description: t("description"),
   };
 }
 const cairo = Cairo({

@@ -31,7 +31,7 @@
   /* الخلفيات والحدود المخصصة */
   --color-app-bg: #f9fafb;
   --color-app-border: #e2e8f0;
-  --color-border-section: #f5f8fa;
+  --color-app-border-section: #f5f8fa;
   --color-search-stroke: #e0e4ea;
 
   /* ألوان الأيقونات */
@@ -170,6 +170,19 @@
   html {
     @apply font-sans scroll-smooth;
   }
+}
+
+@keyframes spin-reverse {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-reverse {
+  animation: spin-reverse 6s linear infinite;
 }
 
 @layer components {

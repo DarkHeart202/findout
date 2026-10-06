@@ -2,16 +2,17 @@
 
 import { useTranslations } from "next-intl";
 import Container from "@/_components/Container";
-import { ArrowBtn, ArrowDown } from "@/icons";
+import { ArrowBtn } from "@/icons";
 import { HomeIcon } from "lucide-react";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
+import { ArrowDown } from "@/icons";
 
 export default function HeroSectionDownload() {
   const t = useTranslations("DownloadApp");
 
   return (
-    <section className="relative min-h-[560px] lg:min-h-[700px] flex items-center overflow-hidden py-10 bg-gradient-to-b from-[#EBF5FF] to-[#F4F8FB]">
+    <section className="border border-app-border-section relative min-h-[560px] lg:min-h-[700px] flex items-center overflow-hidden py-10 bg-gradient-to-b from-[#EBF5FF] to-[#F4F8FB]">
       <Container className="relative z-10">
         <div className="flex flex-col min-h-[560px] lg:min-h-[640px] py-8">
           {/* Navigation Breadcrumbs */}
@@ -511,10 +512,10 @@ export default function HeroSectionDownload() {
 
       {/* خلفية الإضاءة الباهتة */}
       {/* الدائرة الزرقاء */}
-      <div className="absolute top-[20%] -start-20 w-[250px] sm:w-[400px] h-[250px] sm:h-[400px] bg-[#7DD3FC]/50 blur-[80px] sm:blur-[180px] rounded-full z-0 pointer-events-none" />
+      <div className="absolute top-[380px] -start-20 w-[250px] sm:w-[400px] h-[250px] sm:h-[400px] bg-[#7DD3FC]/50 blur-[80px] sm:blur-[180px] rounded-full z-0 pointer-events-none" />
 
       {/* الدائرة البرتقالية */}
-      <div className="absolute bottom-[10%] -end-20 w-[280px] sm:w-[600px] h-[280px] sm:h-[600px] bg-[#F78B16]/25 blur-[70px] sm:blur-[140px] rounded-full z-0 pointer-events-none" />
+      <div className="absolute bottom-10 lg:bottom-[260px] -end-30 lg:-end-[220px] w-[320px] lg:w-[600px] h-[220px] lg:h-[600px] bg-[#F78B16]/25 blur-[80px] lg:blur-[200px] rounded-full z-0 pointer-events-none" />
     </section>
   );
 }

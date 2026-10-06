@@ -1,106 +1,18 @@
 import PlaceCard from "@/_components/PlaceCard";
-import { getTranslations } from "next-intl/server";
-import Container from "./Container";
-import { ArrowBtn } from "@/icons";
 import { Link } from "@/i18n/navigation";
+import { ArrowBtn } from "@/icons";
+import { getTranslations } from "next-intl/server";
 import Button from "./Button";
+import Container from "./Container";
+import { places as allPlaces } from "@/data/places";
+import Reveal from "./Reveal";
 
 export default async function PlacesList() {
   const t = await getTranslations("Home");
-
-  const places = [
-    {
-      id: 1,
-      title: t("places.wadiHanifa.title"),
-      image: "/cards/card1.webp",
-      rating: 4.8,
-      views: 256,
-      location: t("places.wadiHanifa.location"),
-      entry: t("places.wadiHanifa.entry"),
-      distance: "6.8",
-      badge: null,
-    },
-    {
-      id: 2,
-      title: t("places.boulevard.title"),
-      image: "/cards/card2.webp",
-      rating: 4.9,
-      views: 253,
-      location: t("places.boulevard.location"),
-      entry: t("places.boulevard.entry"),
-      distance: "6.8",
-      badge: { type: "open", label: t("badges.openNow") },
-    },
-    {
-      id: 3,
-      title: t("places.diriyahNights.title"),
-      image: "/cards/card3.webp",
-      rating: 4.9,
-      views: 125,
-      location: t("places.diriyahNights.location"),
-      entry: t("places.diriyahNights.entry"),
-      distance: "6.8",
-      badge: { type: "trending", label: t("badges.mostVisited") },
-    },
-    {
-      id: 4,
-      title: t("places.silkRoad.title"),
-      image: "/cards/card4.png",
-      rating: 4.9,
-      views: 250,
-      location: t("places.silkRoad.location"),
-      entry: t("places.silkRoad.entry"),
-      distance: "6.8",
-      badge: { type: "open", label: t("badges.openNow") },
-    },
-    {
-      id: 5,
-      title: t("places.edgeOfTheWorld.title"),
-      image: "/cards/card4.png",
-      rating: 4.7,
-      views: 189,
-      location: t("places.edgeOfTheWorld.location"),
-      entry: t("places.edgeOfTheWorld.entry"),
-      distance: "12.4",
-      badge: { type: "trending", label: t("badges.mostVisited") },
-    },
-    {
-      id: 6,
-      title: t("places.kingdomTower.title"),
-      image: "/cards/Riyadh_Skyline.jpg",
-      rating: 4.8,
-      views: 310,
-      location: t("places.kingdomTower.location"),
-      entry: t("places.kingdomTower.entry"),
-      distance: "4.2",
-      badge: { type: "open", label: t("badges.openNow") },
-    },
-    {
-      id: 7,
-      title: t("places.alBujairiHeritage.title"),
-      image: "/cards/5.webp",
-      rating: 4.9,
-      views: 402,
-      location: t("places.alBujairiHeritage.location"),
-      entry: t("places.alBujairiHeritage.entry"),
-      distance: "8.1",
-      badge: null,
-    },
-    {
-      id: 8,
-      title: t("places.royalGolfClub.title"),
-      image: "/cards/event3.webp",
-      rating: 4.6,
-      views: 94,
-      location: t("places.royalGolfClub.location"),
-      entry: t("places.royalGolfClub.entry"),
-      distance: "15.0",
-      badge: { type: "open", label: t("badges.openNow") },
-    },
-  ];
+  const places = allPlaces;
 
   return (
-    <section className="py-16 bg-app-bg border-1 app-border-section">
+    <Reveal className="py-16 bg-app-bg border border-app-border-section">
       <Container className="flex flex-col items-center">
         <div className="mb-8 flex justify-between items-center w-full">
           <div className="flex flex-col gap-2 text-base font-bold  ">
@@ -140,6 +52,6 @@ export default async function PlacesList() {
           {t("featuredPlaces.viewAllPlaces")}
         </Button>
       </Container>
-    </section>
+    </Reveal>
   );
 }

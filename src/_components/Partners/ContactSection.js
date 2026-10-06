@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import Container from "@/_components/Container";
 import Image from "next/image";
+import Reveal from "../Reveal";
 
 export default function PartnerRegistrationSection() {
   const t = useTranslations("Partners.Form");
@@ -22,7 +23,10 @@ export default function PartnerRegistrationSection() {
   };
 
   return (
-    <section className="border border-border-section py-16 lg:py-20 bg-gray-50">
+    <Reveal
+      id="target-section"
+      className="border border-app-border-section py-16 lg:py-20 bg-gray-50"
+    >
       <Container>
         {/* Main Card Container - Edge to Edge Blue Side */}
         <div className="flex flex-col md:flex-row items-stretch bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
@@ -253,6 +257,6 @@ export default function PartnerRegistrationSection() {
           </form>
         </div>
       </Container>
-    </section>
+    </Reveal>
   );
 }

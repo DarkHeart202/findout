@@ -34,7 +34,9 @@
     "**/*.mts",
     "**/*.ts",
     "**/*.tsx",
-    "src/components/ui/select.js"
+    "src/components/ui/select.js",
+    "src/_components/SignInCard.tsx",
+    "src/icons/Googleicon.jsx"
   ],
   "exclude": ["node_modules"]
 }
