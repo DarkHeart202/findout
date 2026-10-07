@@ -21,7 +21,7 @@ export default function MapView({
   locale = "ar",
 }) {
   return (
-    <div className="w-full h-[400px] rounded-3xl overflow-hidden shadow-[0_0_11.7px_rgba(0,0,0,0.04)] my-8">
+    <div className="w-full h-[400px] rounded-3xl overflow-hidden shadow-[0_0_11.7px_rgba(0,0,0,0.04)]">
       <MapContainer
         center={center}
         zoom={zoom}
