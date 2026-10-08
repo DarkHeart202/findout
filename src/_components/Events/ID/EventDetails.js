@@ -28,13 +28,14 @@ function EventDetails({ event, locale }) {
           <h2 className="text-[18px] md:text-xl font-semibold text-hard-gray -mb-2 ">
             {isRtl ? "معلومات عن المكان" : "Location Info"}
           </h2>
-          <MapView
-            places={[event]}
-            center={[event.lat, event.lng]}
-            zoom={14}
-            locale={locale}
-          />
-
+          <div className="my-6">
+            <MapView
+              places={[event]}
+              center={[event.lat, event.lng]}
+              zoom={14}
+              locale={locale}
+            />
+          </div>
           <div className="flex-col flex md:flex-row gap-5 lg:gap-20 items-center  justify-between w-full">
             <div className="flex flex-col gap-5 sm:gap-0 sm:flex-row justify-between w-full">
               <span className="text-sm flex items-center gap-1.5 font-normal text-[#7d7d7d]">

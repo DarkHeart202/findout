@@ -38,10 +38,10 @@
   --color-icon-color: #9ca3af;
   --color-active-icon: #4b5563;
 
-  --font-cairo: var(--font-cairo);
-  --font-almarai: var(--font-almarai);
-  --font-inter: var(--font-inter);
-  --font-jakarta: var(--font-jakarta);
+  --font-cairo: var(--font-cairo), sans-serif;
+  --font-almarai: var(--font-almarai), sans-serif;
+  --font-inter: var(--font-inter), sans-serif;
+  --font-jakarta: var(--font-jakarta), sans-serif;
 
   --shadow-glass:
     0 8px 20px 0 rgba(15, 23, 42, 0.15),
